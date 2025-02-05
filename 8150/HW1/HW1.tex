@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,outlines}
+\usepackage{graphicx}
+\usepackage{tikzsymbols}
+\newenvironment{statement}[2][Statement]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\begin{document}
+ 
+\title{Complex Problem Set 1} 
+\author{Dahlen Elstran} 
+\maketitle
+
+\begin{statement}[Problem]{1}
+  Describe geometrically the sets of points $z$ in the complex plane defined by the 
+  following relations:
+  \begin{itemize}
+    \item[(a)] $| z - 1 |=1$
+    \item[(b)] $| z - 1 | = 2 | z - 2|$
+    \item[(c)]$1 / z = \bar{z}$
+    \item[(d)]$\text{Re}(z) = 3$ 
+    \item[(e)] $\text{Im}(z) = a$ with $a \in \mathbb{R}$ 
+    \item[(f)] $\text{Re}(z) > a$ with $a \in \mathbb{R}$ 
+    \item[(g)] $| z - 1| < 2|z - 2|$
+  \end{itemize}
+\end{statement}
+\begin{proof}
+  \begin{itemize}
+    \item[(a)] This describes all the points on the complex plane that are 1 distance away from $(1,0)$. Thus this creates 
+      a circle with radius $1$, centered at $(1,0)$.
+    \item[(b)] This is describing all the points where the distance from $(1,0)$ is twice the distance from $(2,0)$. We can do the
+      following algebra to find the equation of this circle:
+      \begin{align*}
+        | z - 1 | &= 2 |z - 2| \\
+        |(x+iy)-(1+i \cdot 0)| &= 2 | (x+iy) - (2 + i \cdot 0)| \\
+        |(x-1)+iy| &= 2|(x-2) =iy| \\
+        ((x-1)^2+y^2)^{\frac{1}{2}} &= 2((x-2)^2+y^2)^{\frac{1}{2}} \\ 
+        (x-1)^2+y^2 &= 4((x-2)^2+y^2) \\
+        x^2 -2x +1+y^2 &= 4(x^2 -4x+4+y^2) \\
+        x^2-2x+1+y^2 &= 4x^2-16x+16+4y^2 \\
+        -3x^2 +14x -3y^2 &= 15 \\
+        -3 \left( x^2 - \frac{14}{3} x +y^2 \right) &= -3(-5) \\
+        x^2 - \frac{14}{3} x +y^2 &= -5 \\
+        x^2 - \frac{14}{3}x + \frac{49}{9} + y^2 &= -5 + \frac{49}{9} \\
+        \left( x- \frac{7}{3} \right)^2 + y^2 &= \frac{4}{9}.
+      \end{align*}
+      \par Thus this must represent a circle centered at $(\frac{7}{3},0)$ with radius $\frac{2}{3}$. 
+    \item[(c)] According to the following algebra:
+      \begin{align*}
+        \frac{1}{z} &= \bar{z} \\
+        \frac{1}{x+iy} &= x - iy \\
+        1 &= (x-iy)(x+iy) \\
+        1 &= x^2 -xiy +xiy -i^2y2 \\
+        1 &= x^2 + y^2,
+      \end{align*}
+      we know that this represents a circle of radius $1$ centered at $(0,0)$.
+    \item[(d)] $\text{Re}(3)$ is all the complex numbers with $3$ as the real component, so it is a straight vertical line 
+      at $x=3$. 
+    \item[(e)] $\text{Im}(z)=a$, where $a \in \mathbb{R}$, is every complex number with $a$ as it's $y$ value. Thus it 
+      is a straight horizontal line at $y=a$. 
+    \item[(f)] Similar to part (d), instead of this being a vertical line at $a$, this would be everything to right of 
+      $a$, not including the vertical line at $a$ itself. 
+    \item[(g)] This will be the circle from part (b), $( x- \frac{7}{3} )^2 + y^2 = \frac{4}{9}$, but instead of 
+      the boundary of this circle, it will be everything outside of it, not including the inside of it, or the boundary itself. 
+  \end{itemize}
+\end{proof}
+
+\begin{statement}[Problem]{2}
+  Prove that $|z_1 + z_2 | \geq ||z_1| - |z_2||$ and explain when equality holds.
+\end{statement}
+\begin{proof}
+  First let us prove the following: Given any two complex numbers $z_1$ and $z_2$,
+  \begin{align*}
+    |z_1| &\leq |z_1-z_2|+|z_2| \\
+    |z_2| &\leq |z_2-z_1|+|z_1|.
+  \end{align*}
+  Note that, because these represent distances, $|z_1 - z_2| = |z_2 - z_1|$. Thus we find that 
+  \begin{align*}
+    |z_1-z_2| &\geq |z_1|-|z_2| \\
+    |z_2-z_1| = |z_1 - z_2| &\geq |z_2|-|z_1| \implies -|z_1 - z_2| \leq |z_1| - |z_2|.
+  \end{align*}
+  Putting both equations together, we get
+  \begin{equation*}
+    -|z_1-z_2| \leq |z_1|-|z_2|\leq|z_1-z_2| \implies |z_1 - z_2| \geq ||z_1|-|z_2||.
+  \end{equation*}
+  We will use this fact in the problem.
+  \par We proceed by cases:
+  \begin{itemize}
+    \item[Case 1:] Let $z_1,z_2 \geq 0$. Then $|z_1 + z_2| \geq |z_1+z_2| \geq ||z_1|-|z_2||$.
+    \item[Case 2:] Let $z_1,z_2 \leq 0$. Then $|z_1+z_2|=||z_1|+|z_2|| \geq ||z_1|-|z_2||$.
+    \item[Case 3:] Let $z_1 > 0$, $z_2 < 0$. Then $|z_1+z_2| =|z_1-|z_2||=||z_1|-|z_2||$. 
+    \item[Case 4:] Let $z_1 < 0$, $z_2 > 0$. Then $|z_1 + z_2| = |-|z_1|+|z_2||=||z_1|-|z_2||$. 
+  \end{itemize}
+  Note that equality holds in cases 3 and 4, or any case where one of the $z_i$'s is 0.
+\end{proof}
+
+\begin{statement}[Problem]{3}
+  Prove that the equation $z^3 + 2z+4=0$ has roots outside the unit circle. 
+\end{statement}
+\begin{proof}
+  Assume $|z| \leq 1$, and that $z$ is a root so that $z^3 + 2z + 4=0$. 
+  From $|z| \leq 1$, we know that $|z^3| \leq 1$ and $|2z| \leq 2$. Then we have 
+  \begin{equation*}
+    z^3 +2z+4=0 \implies z^3+2z=-4
+  \end{equation*}
+  so that $|z^3+2z|=|-4|$.
+  By the triangle inequality, we know that $|z^3 + 2z| \leq |z^3|+|2z|$, so then 
+  \begin{equation*}
+    4=|-4|=|z^3+2z| \leq |z^3| +|2z| \leq 1 + 2 = 3.
+  \end{equation*}
+  Thus we have found a contradiction, so for all the roots of the equation, $|z| > 1$ so that it lies outside the unit circle. 
+\end{proof}
+
+\begin{statement}[Problem]{4}
+  \begin{itemize}
+    \item[(a)] Prove that the if $|w_1|=c|w_2|$ where $c > 0$, then $|w_1 - c^2 w_2| = c|w_1-w_2|$.
+    \item[(b)] Prove that if $c >0$, $c \neq 1$, and $z_1 \neq z_2$, then $| \frac{z-z_1}{z-z_2} | = c$ represents a circle. 
+      Find it's center and radius. 
+  \end{itemize}
+\end{statement}
+\begin{proof}
+  \begin{itemize}
+    \item[(a)] Assume that $|w_1|=c|w_2|$, where $w_1=a+bi$ and $w_2=e+fi$. Then: 
+      \begin{align*}
+        |w_1| &= c|w_2| \implies \\
+        \sqrt{a^2+b^2} &= c \sqrt{e^2+f^2} \text{so that} \\
+        \sqrt{a^2+b^2} &= \sqrt{c^2e^2+c^2f^2} \implies \\
+        a^2+b^2 = c^2e^2 + c^2f^w_2
+      \end{align*}
+      Then we know that 
+      \begin{align*}
+        |w_1 - c^2w_2| &= |(a+bi) - c^2(e+fi)|=|(a-c^2e)+(b-c^2f)i| \\
+                       &= \sqrt{(a-c^2e)^2 + (b-c^ 2f)^2} \\
+                       &= \sqrt{(a^2-2ac^2e+c^4e^)+b^2-2c^2bf+c^4f^2} \\
+                       &= \sqrt{(a^2+b^2) + c^2(c^2e^2+c^2f^2)-2ac^2e-2c^2bf} \\
+                       &= \sqrt{c^2e^2 + c^2f^2 +c^2a^2+c^2b^2-2ac^2e-2c^2bf} \\
+                       &= \sqrt{(ca-ce)^2 + (cb-cf)^2} \\
+                       &= \sqrt{c^2(a-e)^2 + c^2(b-f)^2} \\
+                       &= c \sqrt{(a-e)^2 + (b-f)^2} \\
+                       &= c|w_1-w_2|.
+      \end{align*}
+    \item[(b)] First, note that 
+      \begin{align*}
+        | \frac{z-z_1}{z-z_2}| &= \frac{|z-z_1|}{|z-z_2|} = c 
+        \implies | (z-z_1) - c^2(z-z_2)| = c|(z-z_1)-(z-z_2)|=c|z_2-z_1|. \\
+      \end{align*}
+      Then we can find that 
+      \begin{align*}
+        \frac{|z-z_1||z-z_1|}{|z-z_2||z-z_2|} = c \implies |(z-z_1)^2| &= c|z_2-z_1| \\
+                                                                       &= |(z-z_1)-c^2(z-z_2)|. 
+      \end{align*}
+      Thus 
+      \begin{align*}
+        |z-z_1| &= |1 - c^2 \frac{z-z_2}{z-z_1}| \\
+                &= |1 - c^2 \cdot c^{-1}|  \\ 
+                &= 1-c.
+      \end{align*}
+      Therefore we have a circle of center $z_1$, and radius $1-c$.
+  \end{itemize}
+\end{proof}
+
+\end{document}
