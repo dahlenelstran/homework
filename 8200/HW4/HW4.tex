@@ -81,13 +81,41 @@
   in the torus with the corresponding circle $S^1 \times \{x_0\}$ in the other torus.
 \end{statement}
 \begin{proof}
-  
+  First, to get an idea of what the shape looks like, we can start with two tori in the following sense:
+  \par \begin{center} \includegraphics[scale=.2]{4-1.jpg} \end{center}
+  \par When identifying one circle with another, it is equivalent to say that $b=d$. Thus the diagram transforms into this:
+  \par \begin{center} \includegraphics[scale=.2]{4-2.jpg} \end{center}
+  \par Now, all 6 points are identified to each other, so we can start by gluing the 4 on the corners with the 2 in the center. 
+  Once this is done, we can glue the two remaining points together.
+  \par \begin{center} \includegraphics[scale=.2]{4-3.jpg} \end{center}
+  \par \begin{center} \includegraphics[scale=.2]{4-4.jpg} \end{center} 
+  \par Thus we have two tori stacked on top of each other, where they only intersect on one circle on the bottom of the top one, and on the top of the bottom one. 
+  \par \begin{center} \includegraphics[scale=.2]{4-5.jpg} \end{center} 
+  \par Although it may be worth considering trying this problem with Van Kampen, where the two spaces are each a torus with the intersection circle and an open neighborhood around it, it 
+  may prove simpler to look at the group presentation. If we can define each separate torus like so 
+  \begin{align*}
+    & \pi_1(T_1) = \{a,b \text{ }|\text{ } aba^{-1}b^{-1} = 1\} \\
+    & \pi_1(T_2) = \{c,d \text{ }|\text{ } cdc^{-1}d^{-1} = 1\},
+  \end{align*}
+  \par then, as we saw in the second diagram for this problem, we are simply asked to set $b=d$. Thus the group reprsentation for this space is 
+  \begin{equation*}
+    \pi_1(X) = \{a,b,c,d \text{ }|\text{ } aba^{-1}b^{-1} =1, cdc^{-1}d^{-1} = 1, b=d \}
+  \end{equation*}
+  \par An even simpler way to think about it would be looking at the picture; it is simply another product like the torus, but 
+  instead of $S^1$ being crossed with another $S^1$, its a wedge sum of two $S^1$'s. A visual reprsentation of this is below: 
+  \par \begin{center} \includegraphics[scale=.2]{4-6.png} \end{center} 
+  \par Thus we can conlude:
+  \begin{align*}
+    \pi_1(X) & \cong \pi_1(S^1 \times (S^1 \vee S^1)) \\
+             & \cong \pi(S^1) \times \pi_1(S^1 \vee S^1) \\
+             & \cong \mathbb{Z} \times (\mathbb{Z} \ast \mathbb{Z})
+  \end{align*}
 \end{proof}
 
 \begin{statement}[Problem]{5}
  The mapping torus $T_f$ of a map $f:X \to X$ is the quotient of $X \times I$ 
  obtained by identifying each point $(x,0)$ with $(f(x),1)$. In the case $X = S^1 \vee S^1$ with $f$ basepoint-preserving,
- compute a presentation for $\pi_1(T_f)$ in terms of the induced map $f_*: \pi_1(x) \to \pi_1(X)$. Do the same when $X = S^1 \times S^1$.
+ compute a presentation for $\pi_1(T_f)$ in terms of the induced map $f_*: \pi_1(x) \to \pi_1(x)$. Do the same when $X = S^1 \times S^1$.
 \end{statement}
 \begin{proof}
 
