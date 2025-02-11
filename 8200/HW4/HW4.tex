@@ -14,39 +14,83 @@
 \maketitle
 
 \begin{statement}[Problem]{1}
-
+  Show that the complement of a finite set of points in $\mathbb{R}^n$ is simply-connected if $n \geq 3$. 
 \end{statement}
 \begin{proof}
-
+  (Note that the following pictures are only for the $n=3$ case, but a similar idea is followed for $n >3$.) We begin by imagining these $n$ missing points in an $nth$ dimensional elipsoid-like shape:
+  \par \begin{center} \includegraphics[scale=.2]{1-1.jpg} \end{center}
+  \par From here, we can "pinch" in between the $n$ missing points to create $n$ $D^n$'s, each missing a point in the center.
+  \par \begin{center} \includegraphics[scale=.2]{1-2.jpg} \end{center}
+  \par Then, note that the pink line continues on the boundary of all $n$ $D^n$'s, and can be contracted to a point. 
+  \par \begin{center} \includegraphics[scale=.2]{1-3.jpg} \end{center}
+  \par Then, in each $D^n$, the hole in the center can be expanded so that together the $D^n$ and the hole become an $S^{n-1}$.
+  \par \begin{center} \includegraphics[scale=.2]{1-4.jpg} \end{center}
+  \par \begin{center} \includegraphics[scale=.2]{1-5.jpg} \end{center}
+  \par This is clearly path connected, as this is a wedge sum of $n$ $S^{n-1}$'s. Then, because the fundamental group of $S^n$ is trivial for $n \geq 2$, we know 
+ \begin{align*}
+   \pi_1( \mathbb{R}^n / \{x_0, x_1, \dots, x_n\}) & \cong \pi_1(\vee^n(S^{n-1})) \\
+                                                   & \cong \pi_1(S^{n-1}) \ast \dots \ast \pi_1(S^{n-1}) \\ 
+                                                   & \cong 0 \ast \dots \ast 0 \\
+                                                   & \cong 0.
+ \end{align*}
+ Thus the space is path connected and has a trivial fundamental group, so it is simply-connected.
 \end{proof}
 
 \begin{statement}[Problem]{2}
-
+  Let $X \subset \mathbb{R}^3$ be the union of $n$ lines through the origin. Compute $\pi_1(\mathbb{R}^3 - X)$. 
 \end{statement}
 \begin{proof}
-
+  Once again, I will provide pictures for the $n=2$ case, but describe any $n$ case. First note that when looking at 
+  $\mathbb{R}^3$ as an origin-centered sphere, when a line goes through it, we can deformation retract it to a cylinder:
+  \par \begin{center} \includegraphics[scale=.2]{2-1.jpg} \end{center}
+  \par With this same logic, any other lines through the sphere will have 2 intersection points, which create holes in the cylinder. 
+  Thus we end up with a cylinder with $2(n-1)$ holes in it. 
+  \par \begin{center} \includegraphics[scale=.2]{2-2.jpg} \end{center}
+  \par These holes can be expanded, so that we end up with a cylinder with no surface, just $2(n-1)$ lines connecting the top and bottom circles.
+  \par \begin{center} \includegraphics[scale=.2]{2-3.jpg} \end{center}
+  \par One of the lines can be contracted to a point, giving us $2(n-1)$ loops with a line connecting them.
+  \par \begin{center} \includegraphics[scale=.2]{2-4.jpg} \end{center}
+  \par This last line can be contracted to a point, and so we end up with $2(n-1)+1=2n-1$ $S^1$'s connected at a point.
+  \par \begin{center} \includegraphics[scale=.2]{2-5.jpg} \end{center}
+  \par Thus we have 
+  \begin{align*}
+    \pi_1(\mathbb{R}^3-X) & \cong \pi_1(\vee^{2n-1}(S^1)) \\
+                          & \cong \pi_1(S^1) \ast \dots \ast \pi_1(S^1) \\
+                          & \cong \mathbb{Z} \ast \dots \ast \mathbb{Z}
+  \end{align*}
+  \par And so $\mathbb{R}^3 -X$ has a fundamental group that is isomorphic to $2n-1$ copies of $\mathbb{Z}$.
 \end{proof}
 
 \begin{statement}[Problem]{3}
-
+  Let $X$ be the quotient space of $S^2$ obstained by identifying the north and south poles to a single point. Put a cell complex structure on 
+  $X$ and use this to compute $\pi_1(X)$.
 \end{statement}
 \begin{proof}
-
+  When we identify these two poles, we create the following shape:
+  \par \begin{center} \includegraphics[scale=.2]{3-1.jpg} \end{center}
+  \par We can take this point and expand it into a line
+  \par \begin{center} \includegraphics[scale=.2]{3-2.jpg} \end{center}
+  \par Then we can take the line on the boundary of the sphere and contract it to a point, creating a loop on the outside.
+  \par \begin{center} \includegraphics[scale=.2]{3-3.jpg} \end{center}
+  \par Thus we have $S^2 \vee S^1$, and in terms of cell complex, an $e^0_2$ attached to an $e_1^0$ at an $e_0^0$.
+  Thus the space's fundamental group can be calculated to be $0 \ast \mathbb{Z} \cong \mathbb{Z}$.
 \end{proof}
 
 \begin{statement}[Problem]{4}
-
+  Compute the fundamental group of the space obtained from two tori $S^1 \times S^1$ by identifying a circle $S^1 \times \{x_0\}$ 
+  in the torus with the corresponding circle $S^1 \times \{x_0\}$ in the other torus.
 \end{statement}
 \begin{proof}
-
+  
 \end{proof}
 
 \begin{statement}[Problem]{5}
-
+ The mapping torus $T_f$ of a map $f:X \to X$ is the quotient of $X \times I$ 
+ obtained by identifying each point $(x,0)$ with $(f(x),1)$. In the case $X = S^1 \vee S^1$ with $f$ basepoint-preserving,
+ compute a presentation for $\pi_1(T_f)$ in terms of the induced map $f_*: \pi_1(x) \to \pi_1(X)$. Do the same when $X = S^1 \times S^1$.
 \end{statement}
 \begin{proof}
 
 \end{proof}
-
 
 \end{document}
