@@ -115,10 +115,24 @@
 \begin{statement}[Problem]{5}
  The mapping torus $T_f$ of a map $f:X \to X$ is the quotient of $X \times I$ 
  obtained by identifying each point $(x,0)$ with $(f(x),1)$. In the case $X = S^1 \vee S^1$ with $f$ basepoint-preserving,
- compute a presentation for $\pi_1(T_f)$ in terms of the induced map $f_*: \pi_1(x) \to \pi_1(x)$. Do the same when $X = S^1 \times S^1$.
+ compute a presentation for $\pi_1(T_f)$ in terms of the induced map $f_*: \pi_1(X) \to \pi_1(X)$. Do the same when $X = S^1 \times S^1$.
 \end{statement}
 \begin{proof}
-
+  When considering this as a cell complex, we can imagine the two $S^1$'s as $A$ and $B$, intersecting at a basepoint $x_0$. Let 
+  $C$ be the 1-cell going around the mapping torus that maps the basepoint to itself (because $f$ is basepoint-preserving).
+  Then we can define the following $2$-cells:
+  \par \begin{center} \includegraphics[scale=.2]{5-1.png} \end{center} 
+  \par Thus resulting in the following presentation for the fundamental group:
+  \begin{align*}
+  \pi_1(X) \cong \{ a,b,c \text{ }|\text{ } acf_*(a)c^{-1}=1, bcf_*(b)c^{-1}=1  \}.
+  \end{align*}
+  \par When $X=S^1 \times S^1$, we're just doing a mapping torus of a torus. We can do something similar, where one point of the torus (the basepoint)
+  stays constant so we can sttach a 1-cell in a loop there.
+  \par \begin{center} \includegraphics[scale=.2]{5-2.jpg} \end{center} 
+  \par We can now attach a 3-cell along the edge of $C$, so that it is glued to $X ,f(X)$ and $C$. Thus the group presentation is 
+  \begin{align*}
+    \pi_1(X) \cong \{ a,c \text{ }|\text{ } acf_*(a)c^{-1}=1 \}.
+  \end{align*}
 \end{proof}
 
 \end{document}

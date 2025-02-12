@@ -1,4 +1,4 @@
-PWD /home/dce71310/homework/8200/HW4
+PWD /home/dahlen/homework/8200/HW4
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT HW4.tex
@@ -325,6 +325,16 @@ INPUT ./4-6.png
 INPUT ./4-6.png
 INPUT ./4-6.png
 INPUT ./4-6.png
+INPUT ./5-1.png
+INPUT ./5-1.png
+INPUT ./5-1.png
+INPUT ./5-1.png
+INPUT ./5-1.png
+INPUT ./5-2.jpg
+INPUT ./5-2.jpg
+INPUT ./5-2.jpg
+INPUT ./5-2.jpg
+INPUT ./5-2.jpg
 INPUT HW4.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
