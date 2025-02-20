@@ -13,21 +13,7 @@
 \author{Dahlen Elstran} 
 \maketitle
 
-\begin{statement}[Problem]{1}
-  Prove that 
-  \begin{align*}
-    \int^{\infty}_0 \sin(x^2)dx=\int^{\infty}_0 \cos(x^2)dx=\frac{\sqrt{2\pi}}{4}.
-  \end{align*}
-\end{statement}
-\begin{proof}
-  First note that 
-  \begin{align*}
-    \int^{\infty}_0 e^{ix^2} = \int^{\infty}_0 \cos(x^2) dx + i \int^{\infty}_0 \sin(x^2)dx.
-  \end{align*}
-  Then by the hint, we know that
-\end{proof}
-
-\begin{statement}[Problem]{2}
+\begin{statement}[Problem]{(Stein) 2}
   Show that 
   \begin{align*}
     \int^{\infty}_0 \frac{\sin(x)}{x} dx=\frac{\pi}{2}.
@@ -103,173 +89,88 @@
   \end{equation*}
 \end{proof}
 
-\begin{statement}[Problem]{1}
-
+\begin{statement}[Problem]{(Tie) 2}
+  Let $f$ be any power series centered at the origin. Prove that $f$ has a power series expansion around any point in it's disc of convergence.
 \end{statement}
 \begin{proof}
-
+  By Cauchy's integral formula, we know that 
+  \begin{equation*}
+    f(z) = \int \frac{f(\xi)}{\xi - z} d \xi.
+  \end{equation*}
+  We can rearrange this to be
+  \begin{equation*}
+    \int f(\xi) \cdot \frac{1}{\xi - z + z_0 -z_0}
+  \end{equation*}
+  where $z_0$ is any point in the disc of convergence of $f$. 
+  \par Let $w = \frac{z-z_0}{\xi - z_0}$ so that 
+  \begin{equation*}
+    \int \frac{f(\xi)}{\xi - z_0} \cdot \frac{1}{1-w} = \int \frac{f(\xi)}{\xi - z_0} \sum_{n \geq  0} w^n d \xi.
+  \end{equation*}
+  From here, we can bring the integral into the sum:
+  \begin{equation*}
+    \sum_{n \geq 0} \int \frac{f(\xi)}{\xi - z_0} d \xi \cdot w^n
+  \end{equation*}
+  Then note that 
+  \begin{align*} 
+    \sum_{n \geq 0} \int \frac{f(\xi)}{\xi - z_0} d \xi \cdot w^n &= \sum_{n \geq 0} \int \frac{f(\xi)}{\xi - z_0} d \xi \cdot \frac{(z-z_0)^n}{(\xi - z_0)^n} \\
+                                                                  &= \sum_{n \geq 0} \int \frac{f(\xi)}{(\xi - z_0)^{k+1}} d \xi \cdot (z-z_0)^k
+  \end{align*}
+  Thus we are left with a power series centered at $z_0$, an arbitrary point in the disc of convergence.
 \end{proof}
 
-\begin{statement}[Problem]{1}
-
+\begin{statement}[Problem]{(Tie) 3}
+  Prove the following:
+  \begin{itemize}
+    \item[(a)] The power series $\sum^{\infty}_{n=1} nz^n$ does not converge at any point of the unit circle. 
+    \item[(b)] The power series $\sum^{\infty}_{n=1} \frac{z^n}{n^2}$ converges at every point of the unit circle. 
+    \item[(c)] The power series $\sum^{\infty}{n=1} \frac{z^n}{n}$ converges at every point of the unit circle except at $z=1$. 
+  \end{itemize}
 \end{statement}
 \begin{proof}
-
+  \begin{itemize}
+    \item[(a)] If the point is on the unit circle, we know that $\lvert z \rvert = 1$. Thus 
+      \begin{equation*} 
+        \lvert nz^n \rvert = \lvert n \rvert \to \infty.
+      \end{equation*}
+      so that the series does not converge. 
+    \item[(b)] Because 
+      \begin{align*}
+        \left\lvert \sum \frac{z^n}{n^2} \right\rvert & \leq \sum \left\lvert \frac{z^n}{n^2} \right\rvert \\
+                                                      &= \sum \left\lvert \frac{1}{n^2} \right\rvert \cdot \left\lvert z^n \right\rvert \\
+                                                      &= \sum \left\lvert \frac{1}{n^2} \right\rvert \\
+                                                      & < \infty,
+      \end{align*}
+      we know the series converges absolutely, which implies convergence. 
+    \item[(c)]
+  \end{itemize}
 \end{proof}
 
-\begin{statement}[Problem]{1}
-
+\begin{statement}[Problem]{(Tie) 4} 
+  Don't use the Cauchy integral formula. Show that if $\lvert a \rvert < r < \lvert b \rvert$, then 
+  \begin{equation*}
+    \int_{\gamma} \frac{dz}{(z-\alpha)(z-\beta)} = \frac{2\pi 1}{\alpha - \beta}
+  \end{equation*}
+  where $\gamma$ denotes the circle centered at the origin, of radius $r$, with positive orientation. 
 \end{statement}
 \begin{proof}
-
+  First, we can rewrite the integral like so using partial fractions:
+  \begin{equation*}
+    \int_{\gamma} \frac{dz}{(z-\alpha)(z-\beta)} = \frac{1}{a-b} \left (\int_{\gamma} \frac{dz}{z-a} - \int_{\gamma} \frac{dz}{z-b} \right )
+  \end{equation*}
+  Then because $\alpha$ is inside $\gamma$, we can say 
+  \begin{equation*}
+    \int_{\gamma} \frac{dz}{z-\alpha} = 2\pi i.
+  \end{equation*}
+  Similarly, because $\beta$ is outside $\gamma$, we know 
+  \begin{equation*}
+    \int_{\gamma} \frac{dz}{z-\beta} = 0
+  \end{equation*}
+  Thus 
+  \begin{equation*}
+    \int_{\gamma} \frac{dz}{(z-\alpha)(z-\beta)} = \frac{2\pi 1}{\alpha - \beta}.
+  \end{equation*} 
 \end{proof}
 
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
-
-\begin{statement}[Problem]{1}
-
-\end{statement}
-\begin{proof}
-
-\end{proof}
+\par Note: I started this assignment way too late, I have definitely learned my lesson :(
 
 \end{document}
