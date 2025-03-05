@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,outlines}
+\usepackage{graphicx,tikzsymbols,tcolorbox}
+\renewcommand\qedsymbol{$\blacksquare$}
+\tcbuselibrary{most}
+
+% Defining new environments
+
+\newtcolorbox{newtitle}{
+  enhanced,
+  colframe=black,
+  colback=white,
+  boxsep=5pt,
+  arc=8pt,
+  sharp corners=south,
+  borderline={0.5pt}{0pt}{black},
+  borderline={1.8pt}{-5pt}{black},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter, number within=section]{theorem}[2][title]{
+  enhanced,
+  title={Theorem \thetcbcounter \if\relax\detokenize{#2}\relax\else\ (#2)\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{definition}{
+  enhanced,
+  title={Definition \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{fact}{
+  enhanced,
+  title={Fact \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{newproof}{
+  enhanced,
+  frame hidden,
+  colback=white,
+  title={Proof.},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{black},
+  after upper={\hfill $\blacksquare$},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter, number within=section]{uq}{
+  enhanced,
+  title=Question,
+  colframe=red,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{aq}{
+  enhanced,
+  title=Question,
+  colframe=green!50!black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{answer}{
+  enhanced,
+  frame hidden,
+  colback=white,
+  colframe=green!50!black,
+  title={Answer},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{green!50!black}
+}
+
+\newtcolorbox{sectionbox}{
+  colback=black!10,
+  colframe=black, 
+  fonttitle=\bfseries\Large, 
+  arc=4mm, 
+  width=\textwidth
+}
+
+% Redefine section as well
+
+% Renew commands later
+
+\begin{document}
+
+\begin{newtitle}
+  \begin{center}
+    \textbf{\Huge Notes}
+  \end{center}
+  \textbf{Dahlen Elstran} \hfill \textbf{\today} \\
+  Professor \hfill Spring 2025
+\end{newtitle}
+
+\begin{theorem}
+  Something something topology
+\end{theorem}
+\begin{newproof}
+  Because I said so. \\
+  Math is cool
+\end{newproof}
+
+\begin{theorem}
+  Something something topology
+\end{theorem}
+\begin{newproof}
+  Because I said so. \\
+  Math is cool
+\end{newproof}
+
+\begin{uq}
+  Unanswered question here 
+\end{uq}
+
+\begin{aq}
+  Answered question here 
+\end{aq}
+\begin{answer}
+  Here is an answer
+\end{answer}
+
+\section{The Other Section}
+
+Some other text and junk
+
+\begin{theorem}
+  Something something topology
+\end{theorem}
+\begin{newproof}
+  Because I said so. \\
+  Math is cool
+\end{newproof}
+
+\begin{definition}
+  This is a definition.
+\end{definition}
+
+\begin{fact}
+  This is a fact.
+\end{fact}
+
+\end{document}
