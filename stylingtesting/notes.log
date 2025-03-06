@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.2.27)  5 MAR 2025 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2025.2.27)  5 MAR 2025 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -588,25 +588,26 @@ Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
 \c@tcb@cnt@theorem=\count399
 \c@tcb@cnt@definition=\count400
 \c@tcb@cnt@fact=\count401
-\c@tcb@cnt@uq=\count402
-\c@tcb@cnt@aq=\count403
+\c@tcb@cnt@notation=\count402
+\c@tcb@cnt@uq=\count403
+\c@tcb@cnt@aq=\count404
  (./notes.aux)
 \openout1 = `notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -644,16 +645,16 @@ LaTeX Font Info:    ... okay on input line 123.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count404
+\scratchcounter=\count405
 \scratchdimen=\dimen283
 \scratchbox=\box81
-\nofMPsegments=\count405
-\nofMParguments=\count406
+\nofMPsegments=\count406
+\nofMParguments=\count407
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count407
+\MPscratchCnt=\count408
 \MPscratchDim=\dimen284
-\MPnumerator=\count408
-\makeMPintoPDFobject=\count409
+\MPnumerator=\count409
+\makeMPintoPDFobject=\count410
 \everyMPtoPDFconversion=\toks46
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -661,17 +662,17 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count410
+\c@lstlisting=\count411
  (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks47
 \inpenc@posthook=\toks48
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 139.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 143.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 139.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 143.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -683,15 +684,15 @@ L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 22976 strings out of 476076
- 502216 string characters out of 5793775
+ 22985 strings out of 476076
+ 502392 string characters out of 5793775
  1956187 words of memory out of 5000000
- 44690 multiletter control sequences out of 15000+600000
+ 44699 multiletter control sequences out of 15000+600000
  563934 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,7n,107p,488b,1292s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on notes.pdf (2 pages, 47001 bytes).
+Output written on notes.pdf (2 pages, 47199 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream

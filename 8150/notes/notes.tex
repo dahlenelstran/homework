@@ -55,6 +55,18 @@ title={Theorem \thetcbcounter \if\relax\detokenize{#2}\relax\else\ (#2)\fi},
   boxed title style={boxrule=0.5mm}
 }
 
+\newtcolorbox[auto counter, number within=section]{notation}{
+  enhanced,
+  title={Notation},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
 \newtcolorbox{newproof}{
   enhanced,
   frame hidden,
@@ -273,6 +285,115 @@ a dilation ($rs$).
   A sequence $\{z_1, z_2, \dots \}$ of complex numbers is said to \textbf{converge} 
   to $w \in \mathbb{C}$ if 
   $$ \lim_{n \to \infty} \vert z_n - w \vert = 0 \text{ or,equivalently, } w = \lim_{n \to \infty} z_n. $$
+\end{definition}
+
+\begin{aq}
+  Is this just the same thing as being convergent in $\mathbb{R}$? Just that the limit is a complex 
+  number, not a real one?
+\end{aq}
+
+\begin{answer}
+  Stein states that $z_n$ converges to $w$ if and only if the sequence of the real and imaginary parts
+  of $z_n$ converge to the real and imaginary parts of $w$. This makes sense, as in real convergence, 
+  it converges to a $y$ value, but in the complex plane, it must converge from the $x$ (real) direction, 
+  and the $y$ (imaginary) direction.
+\end{answer}
+
+\begin{uq}
+  Given the previous answer, is it possible for a complex sequence to converge in the real direction 
+  much sooner than the imaginary? Does the difference in "convergence speed" matter?
+\end{uq}
+
+\begin{definition}
+  A sequence $\{ z_n \}$ is said to be a \textbf{Cauchy Sequence} if 
+  $$ \vert z_n - z_m \vert \to 0 \text{ as } n,m \to \infty .$$
+\end{definition}
+
+Similarly to Real Analysis, a sequence is Cauchy if it's elements get closer and closer together 
+as the sequence reaches infinity. 
+
+\begin{aq}
+  How can a sequence be convergent, but not Cauchy?
+\end{aq}
+\begin{answer}
+  Being convergent always implies the sequence is Cauchy, because if the elements get farther away from each 
+  other, they can never approach a limit. But it is possible for a sequence to be Cauchy and not convergent. 
+  This is because being Cauchy doesn't specify a value for the limit; it is possible the Cauchy sequence is 
+  approaching a value outside whatever space we're discussing. Thus from our scope (only considering our space 
+  missing the limit value), the sequence is not convergent.
+\end{answer}
+
+Similar to convergence, the sequence $\{z_n\}$ is Cauchy if and only if the real and imaginary parts are. 
+
+\begin{definition}
+  A space is \textbf{complete} if every Cauchy sequence converges to a point in the space. 
+\end{definition}
+
+\begin{theorem}{}
+  The complex numbers $\mathbb{C}$ is complete.
+\end{theorem}
+\begin{newproof}
+  Because $\mathbb{R}$ is complete, we know every real Cauchy sequence has a limit in $\mathbb{R}$. Thus 
+  the real and imaginary parts of any Cauchy sequence must converge, so $\{z_n\}$ must converge as well. 
+\end{newproof}
+
+\begin{definition}
+  If $z_0 \in \mathbb{C}$ and $r > 0$, we define the \textbf{open disc $D_r(z_0)$ of radius $r$ centered 
+  at $z_0$} to be the set of all complex numbers that are at absolute value strictly less than 
+  $r$ from $z_0$. Alternatively,
+  $$ D_r(z_0)=\{z \in \mathbb{C} : \vert z - z_0 \vert < r \} $$
+\end{definition}
+
+An open disc is just a circle of radius $r$, centered at $x_0$, with no "edge". It's called the "open circle" 
+because it is an open set. 
+
+\begin{definition}
+  Similarly, a \textbf{closed disc} is defined as 
+  $$ \bar{D}_r(z_0)=\{z \in \mathbb{C} : \vert z - z_0 \vert \leq r \} $$
+\end{definition}
+
+This is just a disc including the boundary, so it is a closed set. 
+
+\begin{definition}
+  As you can imagine, the \textbf{boundary of a disc} is defined as so:
+  $$ C_r(z_0)=\{z \in \mathbb{C} : \vert z - z_0 \vert = r \} $$
+\end{definition}
+
+\begin{notation}
+  The \textbf{unit disc} is defined as the following:
+  $$ \mathbb{D} = \{ z \in \mathbb{C} : \vert z \vert < 1 \} $$
+\end{notation}
+
+This is just an open disc centered at the origin of radius one. 
+
+\begin{definition}
+  Given a set $\Omega \subset \mathbb{C}$, a point $z_0$ is an \textbf{interior point} of $\Omega$ if there 
+  exists $r > 0$ such that $D_r(z_0) \subset \Omega$.
+\end{definition}
+
+\begin{definition}
+  The \textbf{interior} of a set consists of all it's interior points.
+\end{definition}
+
+\begin{aq}
+  So is the interior just everything other than the boundary and exterior? Meaning an open disc is equivalent to
+  it's interior?
+\end{aq}
+\begin{answer}
+  Yes. :)
+\end{answer}
+
+\begin{definition}
+  A set if \textbf{open} if every point in that set is an interior point. Similarly, a set is \textbf{closed} 
+  if it's complement $\Omega^c = \mathbb{C} - \Omega$ is open.
+\end{definition}
+
+Note that $\Omega^c = \mathbb{C} - \Omega$ is just the exterior of the set. So if the exterior is open, then 
+$\Omega$ must include it's boundary.
+
+\begin{definition}
+  A point $z \in \mathbb{C}$ is said to be a \textbf{limit point} of the set $\Omega$ if there exists a sequence 
+  of points $z_n \in \Omega$ such that $z_n \neq z$ and $\lim_{n \to \infty} z_n = z$. 
 \end{definition}
 
 
