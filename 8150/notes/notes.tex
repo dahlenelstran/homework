@@ -2,6 +2,7 @@
  \usepackage[margin=1in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,outlines}
 \usepackage{graphicx,tikzsymbols,tcolorbox}
+\newcommand{\C}{\mathbb{C}}
 \renewcommand\qedsymbol{$\blacksquare$}
 \tcbuselibrary{most}
 
@@ -396,5 +397,111 @@ $\Omega$ must include it's boundary.
   of points $z_n \in \Omega$ such that $z_n \neq z$ and $\lim_{n \to \infty} z_n = z$. 
 \end{definition}
 
+So an example of a limit point would be a point in the boundary. It is worth noting that a set is closed 
+if and only if it contains all it's limit points (boundary points).
+
+\begin{definition}
+  The \textbf{closure} of any set $\Omega$ is the union of $\Omega$ and its limit points, and is often denoted 
+  by $\bar{\Omega}$. 
+\end{definition}
+
+So in an open set, the closure would be the set and it's boundary (what could be added to the set 
+to make it closed). In a closed set, the closure is just the set itself. 
+
+\begin{definition} 
+  The \textbf{boundary} of a set $\Omega$ is equal to its closure minus its interior, and is often 
+  denotes by $\delta \Omega$.
+\end{definition}
+
+So the boundary is just the set of limit points. 
+
+\begin{definition}
+  A set $\Omega$ is \textbf{bounded} if there exists $M > 0$ such that $\vert z \vert < M$ whenever $z \in
+  \Omega$. 
+\end{definition}
+
+So it is the same as being bounded in Real Analysis, just instead of a horizontal line at height $M$, 
+it is a disc with radius $M$ centered at the origin. 
+
+\begin{definition}
+  If $\Omega$ is bounded, we define its \textbf{diameter} by 
+  $$ \text{diam}(\Omega) = \sup_{z,w \in \Omega} \vert z - w \vert $$
+\end{definition}
+
+So the diameter is just the furthest straight line you can draw between any two points. 
+
+\begin{definition}
+  A set $\Omega$ is said to be \textbf{compact} if it is closed and bounded.
+\end{definition}
+
+Note that this is the same definition as Real Analysis.
+
+\begin{theorem}{}
+  The set $\Omega \subset \mathbb{C}$ is compact if and only if every sequence $\{ z_n \} \subset \Omega$ 
+  has a subsequence that converges to a point in $\Omega$.
+\end{theorem}
+
+This is just saying that every sequence in the set can be "cut off" at a point and still converge
+in the set.
+
+\begin{newproof}
+  This follows from the similar statement in Real Analysis, and the correspondence between convergence in
+  the real and complex plane.
+\end{newproof}
+
+\begin{definition}
+  An \textbf{open covering} of $\Omega$ is a family of open sets $\{ U_{\alpha}\}$ such that 
+    $\Omega \subset \bigcup_{\alpha} U_{\alpha}$.
+\end{definition}
+
+An open covering is just any set of open discs that completely cover the set on the complex plane. Here's 
+how I visualize it:
+
+\par \begin{center} \includegraphics[scale=.2]{1-3.png} \end{center}
+
+where both the red and blue parts are different subcovers. Note that a subcover can have 
+uncountably many open sets.
+
+\begin{theorem}{}
+  A set $\Omega$ is compact if and only if every open covering has a finite subcovering.
+\end{theorem}
+
+This is similar to the statement in Real Analysis, and can be proved using that. But the general idea 
+is that if a set is compact, it's not infinite in size (more accurately, diameter), and it's closed. If
+this is the case, then clearly you can have a finite subcovering of any open cover. 
+
+\begin{uq}
+  May want to look back at a proof of this. I'm not understanding why an open cover of infinitely many balls 
+  around points would have a finite subcover, if the set itself is infinite.
+\end{uq}
+
+\begin{theorem}{}
+  If $\Omega_1 \subset \Omega_2 \subset \dots \subset \Omega_n \subset \cdots$ is a sequence of 
+  non-empty compact sets in $\mathbb{C}$ with the property that $\text{diam}(\Omega_n) \to 0$ 
+  as $n \to \infty$, then there exists a unique point $w \in \mathbb{C}$ such that $w \in \Omega_n$ 
+  for all $n$.
+\end{theorem}
+
+Visually, this is saying if you have a bunch of circles containing each other that get smaller and smaller, 
+there must be some point in the center, where the smallest circles are, and there must only be one. 
+
+\begin{newproof}
+  Let $z_n$ be a point in each $\Omega_n$. Because $\text{diam}(\Omega_n) \to 0$, then 
+  $\sup_{z,w \in \Omega_n} \vert z - w \vert \to 0$, by the definition of a diameter. Thus $\{ z_n \}$ is 
+  a Cauchy sequence, because the points are getting closer and closer together. Thus it must converge, and 
+  call this value $w$. Because each set is compact, we must have $w$ (a limit point), be in each set. If there 
+  were another point satisfying this, call it $w'$, then the diameter between them would be nonzero, which is 
+  a contradiction.
+\end{newproof}
+
+\begin{definition}
+  An open set $\Omega \subset \C$ is said to be \textbf{connected} if it is not possible to find two disjoint 
+  non-empty open sets $\Omega_1$ and $\Omega_2$ such that $\Omega = \Omega_1 \cap \Omega_2$. 
+  Similarly, a closed set $F$ is connected if one cannot write $F = F_1 \cup F_2$ where $F_1$ and 
+  $F_2$ are disjoint non-empty closed sets.
+\end{definition}
+
+If a set cannot be broken up into two disjoint open sets, there must be some "overlap". Connectedness 
+is a  simple as it sounds.
 
 \end{document}
