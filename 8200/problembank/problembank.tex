@@ -20,7 +20,7 @@
 \author{Dahlen Elstran} 
 \maketitle
 
-\Section{Revised}
+\section{Revised}
 
 \subsection{Homework 1}
 
@@ -28,9 +28,10 @@
     Construct an explicit deformation retraction of $\mathbb{R}^n - \{0\}$ onto $S^{n-1}$.
 \end{statement}
 \begin{proof}
-    First note that $S^{n-1}$ is defined to be all the points $(x_1, \dots, x_n)$ such that 
-    $\sqrt{x_1^2+ \dots + x_n^2}=1$. Let $f_t(x_1, \dots , x_n)=(1+t(\frac{1}{\sqrt{x_1^2 + \dots + x_n^2}} - 1))
-    (x_1, \dots, x_n)$. Note that this is a continuous function because $(x_1, \dots, x_n) \neq 0$ and it is made up of 
+    First note that $S^{n-1}$ is defined to be all the points $(x_1, \dots, x_n)$ such that \\
+    $\sqrt{x_1^2+ \dots + x_n^2}=1$. 
+    Let $f_t(x_1, \dots , x_n)=(1+t(\frac{1}{\sqrt{x_1^2 + \dots + x_n^2}} - 1))(x_1, \dots, x_n)$. 
+    Note that this is a continuous function because $(x_1, \dots, x_n) \neq 0$ and it is made up of 
     continuous functions. Then we have
     \begin{align*}
         f_0(x_1, \dots, x_n) &= (1+0)(x_1, \dots, x_n) = (x_1, \dots, x_n) \\
@@ -166,6 +167,15 @@
     As shown in the picture below, you can condense there the neck meets the rest of the bottle into one point, extend the neck out so there is only a 1-cell coming from that intersection point, until the neck is pushed all the way into a sphere. Then all that is left is a sphere with a circle on the outside and another cirlce on the inside, where the circles intersect at exactly one point. Thus $X \subset \mathbb{R}^3 \cong S^1 \vee S^1 \vee S^1$.
     \par \includegraphics[scale=.3]{1.20.jpg}
 \end{proof}
+
+\subsection{Homework 1 Extra Problems}
+
+\begin{statement}[Hatcher] {0.6}
+  \begin{itemize}
+    \item Let $X$ be the subspace of $\mathbb{R}^2$ consisting of the horizontal segment $[0,1] \times \{0\}$ together with all the vertical segments 
+      $\{r\} \times [0,1-r]$. 
+  \end{itemize}
+\end{statement}
 
 \section{Not Revised}
 

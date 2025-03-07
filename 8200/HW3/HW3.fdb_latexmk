@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1740021707.59285 "HW3.tex" "HW3.pdf" "HW3" 1740021708.21377 0
+["pdflatex"] 1740512716.68001 "HW3.tex" "HW3.pdf" "HW3" 1740512717.15766 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1736268207 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1736268207 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1736268207 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -136,12 +136,12 @@
   "/usr/share/texmf-dist/tex/latex/tools/xspace.sty" 1736268207 4545 9f5ea23ab1c91476c42749893f790666 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1736268207 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1736268207 41588 b43d3e860a4f94167ee1e725ff526a72 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1738718433.40231 29871 18e04762487e39c9af1b8df78fcf191a ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1738718422 7113014 b70906f200324404e5e56165c3e04205 ""
-  "3.jpg" 1738756001.78608 53271 6653e6e280b0a384058e0d5aafcc2cfe ""
-  "4.png" 1738756013.48944 70453 454403b5dad1373d668262b61a1309af ""
-  "HW3.aux" 1740021708.15177 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
-  "HW3.tex" 1738944420.40203 8863 11ab58f76bd814c1b79e1c8659ce6c4e ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1736440783.52723 29871 18e04762487e39c9af1b8df78fcf191a ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1736440766 7113017 6c99319bc249c361505eb35b8c3ddf13 ""
+  "3.jpg" 1738763997.05877 53271 6653e6e280b0a384058e0d5aafcc2cfe ""
+  "4.png" 1738763997.05977 70453 454403b5dad1373d668262b61a1309af ""
+  "HW3.aux" 1740512717.09669 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "HW3.tex" 1738763997.06677 8863 11ab58f76bd814c1b79e1c8659ce6c4e ""
   (generated)
   "HW3.aux"
   "HW3.log"
