@@ -48,16 +48,34 @@
 
 \begin{newtitle}
   \begin{center}
-    \textbf{\Huge Homework}
+    \textbf{\Huge 8200 Homework 6}
   \end{center}
-  \textbf{Dahlen Elstran} \hfill \textbf{\today}
+  \hfill \textbf{\today}
 \end{newtitle}
 
 \begin{statement}
-  This is a statement
+  Suppose $X$ is path connected and $p: (\tilde{X},\tilde{x_0}) \to (X,x_0)$ is a path connected covering space of $X$. 
+  Prove that the number of sheets of this covering space is equal to the index of $p_*(\pi_1(\tilde{X},\tilde{x_0}))$ 
+  in $\pi_1(X,x_0)$.
 \end{statement}
+
 \begin{newproof}
-  This is a proof
+  Let $f$ be any loop with basepoint $x_0$, so that $\tilde{f}$ is it's lift, where $X$ cooresponds to 
+  $\tilde{X}$ and $x_0$, $\tilde{x_0}$. Let $g \in G=p_*(\pi_1(\tilde{X},\tilde{x_0}))$, so that $g \circ f$ has 
+  the lift $\tilde{g} \circ \tilde{f}$. Note that because $\tilde{g}$ is a loop, $\tilde{g} \circ 
+  \tilde{f}$ ends at the same point as $\tilde{f}$. Then define a function $\phi: G[f] \to p^{-1}(x)$, 
+  where $G[f] \mapsto \tilde{f}(1)$. Because $\tilde{X}$ is path connected, $\phi$ is surjective. 
+  Then note that because $\phi(G[f_1])=\phi(G[f_2])$ implies that $f_1 \circ \bar{f_2}$ 
+  lifts to a loop based at $\tilde{x_0}$, so that $[f_1][f_2]^{-1} \in G$, and $g[f_1]=G[f_2]$, so 
+  that $\phi$ is injective. Thus the number of cosets (index) is equal to the number of sheets. 
+\end{newproof}
+
+\begin{statement}
+  Construct nonnormal covering spaces of the Klein Bottle by a Klein bottle and by a torus. 
+\end{statement}
+
+\begin{newproof}
+
 \end{newproof}
 
 \end{document}

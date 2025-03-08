@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,outlines}
+\usepackage{graphicx,tikzsymbols,tcolorbox}
+\renewcommand\qedsymbol{$\blacksquare$}
+\tcbuselibrary{most}
+
+\newtcolorbox{newtitle}{
+  enhanced,
+  colframe=black,
+  colback=white,
+  boxsep=5pt,
+  arc=8pt,
+  sharp corners=south,
+  borderline={0.5pt}{0pt}{black},
+  borderline={1.8pt}{-5pt}{black},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter]{statement}{
+  enhanced,
+  title={Exercise \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{newproof}{
+  enhanced,
+  frame hidden,
+  colback=white,
+  title={Proof.},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{black},
+  after upper={\hfill $\blacksquare$}
+}
+
+\begin{document}
+
+\begin{newtitle}
+  \begin{center}
+    \textbf{\Huge 8150 Homework III}
+  \end{center}
+  \textbf{Dahlen Elstran} \hfill \textbf{\today}
+\end{newtitle}
+
+\section*{Stein Problems}
+
+\begin{statement}
+
+\end{statement}
+
+
+\section*{Tie Problems}
+
+\begin{statement}
+  Prove that if 
+  $$ \sum^{\infty}_{n=-\infty} c_n(z-a)^n \text{ and } \sum^{\infty}_{n=-\infty} c'_n(z-a)^n $$
+  are Laurent series expansions of $f(z)$, then $c_n=c'_n$ for all $n$.
+\end{statement}
+\begin{newproof}
+  Let $f(z)=\sum^{\infty}_{n=-\infty} c_n(z-a)^n=\sum^{\infty}_{n=-\infty} c'_n(z-a)^n$. Then we know, for any integer $k$,  
+  \begin{equation*}
+    f(z)(z-a)^{-k-1}=\sum^{\infty}_{n=-\infty} c_n(z-a)^{n-k-1}=\sum^{\infty}_{n=-\infty} c'_n(z-a)^{n-k-1}
+  \end{equation*}
+  Then let $\gamma$ be any closed contour in the annulus going around $a$ once, and because it is a compact set 
+  of points, the Luarent serieses can be integrated termwise:
+  \begin{equation*}
+    \sum^{\infty}_{n=-\infty}c_n \oint_{\gamma} (z-a)^{n-k-1}dz=\sum^{\infty}_{n=-\infty}c'_n \oint_{\gamma} (z-a)^{n-k-1}dz
+  \end{equation*}
+  We know that 
+  \begin{equation*}
+    \oint(z-a)^{n-k-1}dz = 2i\pi \text{ if } n=k \text{ and } 0 \text{ if } n \neq k
+  \end{equation*}
+  So then we are left with $2i\pi c_m = 21\pi c'_n$ for any $k$, which proves the statement.
+\end{newproof}
+
+\begin{statement}
+  Expand $\frac{1}{1-z^2} + \frac{1}{3-z}$ in a series of the form $\sum^{\infty}{-\infty} a_nz^n$. How many 
+  such expansions are there? In which domain is each of them valid?
+\end{statement}
+\begin{newproof}
+  We find that:
+  \begin{align*}
+    \frac{1}{z-3} &= -\frac{1}{3} \frac{1}{1-3z^{-1}}=-\frac{1}{3} \sum_{ k \geq 0} 3^{-k}z^{k} \text{ for } \vert z \vert < 3 \\
+                  &= \frac{1}{z} \frac{1}{1-3z^{-1}} = z^{-1}\sum_{k \geq 0} 3^kz^{-k} \text{ for } \vert z \vert > 3 
+  \end{align*}
+  and:
+  \begin{align*}
+    \frac{1}{1-z^2} &= \sum_{k \geq 0} z^{2k} \text{ for } \vert z \vert < 1 \\
+                    &= \frac{1}{z^2} \frac{-1}{1-z^{-2}}=-z^{-2}\sum_{k \geq 0} z^{-2k} \text{ for } \vert z \vert > 1 
+  \end{align*}
+  So we can just list all the possible combinations to find:
+  \begin{align*}
+    f(z) &= -\frac{1}{3} \sum_{ k \geq 0} 3^{-k}z^{k} + \sum_{k \geq 0} z^{2k} \text{ for } \vert z \vert \in (-\infty, 1) \\
+    f(z) &= -\frac{1}{3} \sum_{ k \geq 0} 3^{-k}z^{k}-z^{-2}\sum_{k \geq 0} z^{-2k} \text{ for } \vert z \vert \in (1,3) \\
+    f(z) &= z^{-1}\sum_{k \geq 0} 3^kz^{-k} + \sum_{k \geq 0} z^{2k} \text{ for } \vert z \vert \in (-\infty,1) \cup (3, \infty) \\
+    f(z) &= z^{-1}\sum_{k \geq 0} 3^kz^{-k}-z^{-2}\sum_{k \geq 0} z^{-2k} \text{ for } \vert z \vert \in (3,\infty)
+  \end{align*}
+\end{newproof}
+
+\begin{statement}
+  Let $P(z)$ and $Q(z)$ be polynomials with no common zeros. Assume $Q(a)=0$. Find the principal part of 
+  $P(z)/Q(z)$ at $z=a$ if the zero $a$ is (i) simple; (ii) double. Express your answers explicitly using $P$ and $Q$. 
+\end{statement}
+\begin{newproof}
+  \begin{itemize}
+    \item[i.]
+    \item[ii.]
+  \end{itemize}
+\end{newproof}
+
+\end{document}
