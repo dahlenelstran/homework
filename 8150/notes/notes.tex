@@ -504,4 +504,56 @@ there must be some point in the center, where the smallest circles are, and ther
 If a set cannot be broken up into two disjoint open sets, there must be some "overlap". Connectedness 
 is a  simple as it sounds.
 
+{\Huge THIS IS WHERE I LEFT OFF}
+
+\section{Meromorphic Functions and the Logarithm}
+
+\subsection{Zeros and Poles}
+
+\begin{definition}
+  A \textbf{point singularity} of a function $f$ is a complex number $z_0$ such that $f$ is defined in a 
+  neighborhood of $z_0$ but not at the point $z_0$ itself. This is also called an \textbf{isolated singularity}.
+\end{definition}
+
+An exmple of this could be the function $f$ that is defined on the punctured plane by $f(z)=z$. Then the 
+origin is a point of singularity, unless we explicitly define $f(0)=0$. 
+
+\begin{uq}
+  So I'm confused-- why can't $f(0)=0$ naturally? What happens at $z=0$?
+\end{uq}
+
+Because the "issue" can be solved by explicitly defining the one point, we can call that singularity \textbf{removable}.
+
+\par Another example is $f(z)=\frac{1}{z}$. This singularity (also at $z=0$) is called a \textbf{pole singularity}
+because the function approaches infinity from the left and the right of the singularity.
+
+\par A more complicated example is $f(z)=e^{i/z}$, which can not be explained by poles or removable singularities because 
+the limits from the left and right on the real axis are not equal.
+
+\begin{definition}
+  A complex number $z_0$ is a \textbf{zero} for the holomorphic function $f$ if $f(z_0)=0$.
+\end{definition}
+
+Riveting, who could have guessed.
+
+Note that if $f$ is holomorphic in $\Omega$ and $f(z_0)=0$ for some $z_0 \in \Omega$, then there exists an 
+open neighborhood $U$ of $z_0$ such tht $f(z) \neq 0$ for all $z \in U - \{ z_0\}$, unless $f$ 
+is identically zero.
+
+\begin{theorem}{}
+  Suppose that $f$ is holomorphic in a connected open set $\Omega$, has a zero at a point $z_0 \in \Omega$, and does not 
+  vanish identically in $\Omega$. Then there exists a neighborhood $U \subset \Omega$ of $z_0$, a 
+  nonvanishing holomorphic function $g$ on $U$, and a unique positive integer $n$ such that
+  $$ f(z) = (z-z_0)^ng(z) \text{ for all } z \in U. $$
+\end{theorem}
+
+So all this is saying is that if there is a zero in a nonzero holomorphic function, the function in a neighborhood 
+of this point can be written in the above form.
+
+\begin{newproof}
+  Bruh go back and fill this out!!!!
+\end{newproof}
+
+
+
 \end{document}

@@ -119,4 +119,78 @@
   \end{itemize}
 \end{newproof}
 
+\begin{statement}
+  Let $f(z)$ be a non-constant analytic function in $\vert z \vert > 0$ such that $f(z_n)=0$ for infinite 
+  many points $z_n$ with $lim_{n \to \infty}z_n=0$. Show that $z=0$ is an essential singularity for $f(z)$.
+\end{statement}
+\begin{newproof}
+  Assume, for contradiction, that $z=0$ is a removable singularity. Then $f$ would extend to a holomorphic 
+  function over $z=0$, so that $f(0)=f(\lim z_n)=\lim f(z_n) = 0$. But then $f$ would have to be identically 
+  zero, because of the identity principal. This contradicts the fact that $f$ is stated to be non-constant.
+  \par Then assume for contradiction that $z=0$ is a pole. Then $f(z_n) \to \infty$. This is a contradiction
+  because $f(z_n)=0$ infinitely many times.
+  \par Thus $z=0$ must be an essential singularity. 
+\end{newproof}
+
+\begin{statement}
+  Let $f$ be entire and suppose that $\lim_{x \to \infty} f(z) = \infty$. Show that $f$ is a polynomial.
+\end{statement}
+\begin{newproof}
+  First, note that because $f$ is unbounded, there must exist some $R$ such that $f(D^c_R) \subset D^c$. 
+  Therefore we know that $f$ is nonvanishing on $D^c_R$. Then we know the zeroes of $f$, $Z_f$, is a 
+  closed subset of a compact set. Therefore we know it is either finite, or has an accumulation point.
+  If it had an accumulation point, $f$ would have to be identically zero, so $Z_f$ must be finite. We can 
+  then define, where $n$ represents the number of zeroes for $f$, 
+  \begin{equation*}
+    \phi (z) = \Pi_{i \leq n} (z-z_i) \text{ and } F(z)= \frac{\phi (z)}{f(z)}.
+  \end{equation*}
+  Then note that $F$ is nonvanishing, entire, and bounded. Thus by Liouville, it has to be constant, so 
+  $f(z)=c \phi(z)$.
+\end{newproof}
+
+\begin{statement}
+  Find the number of roots of $z^4 - 6z+3=0$ in $\vert z \vert < 1$ and $1 < \vert z \vert < 2$ respectively. 
+\end{statement}
+\begin{newproof}
+  \begin{itemize}
+    \item In $\vert z \vert < 1$:
+      \subitem Small: $z^4 + 3$
+      \subitem Big: $-6z$
+    \item In $\vert z \vert = 1$:
+      \subitem $\vert m(z) \vert = \vert z^4 + 3 \vert \leq \vert 4 \vert^4 + 3 = 4 < 6 = \vert -6z \vert = \vert M(z) \vert$
+    \item In $\vert z \vert < 2$:
+      \subitem Small: $-6z+3$
+      \subitem Big: $z^4$
+    \item In $\vert z \vert = 2$:
+      \subitem $\vert m(z) \vert = \vert -6z+3 \vert \leq 6+3=9 < 2^4 = \vert M(z) \vert$
+  \end{itemize}
+  Therefore there is 1 root in $\vert z \vert < 1$, and there are 3 zeroes in $1 < \vert z \vert < 2$.
+\end{newproof}
+
+\begin{statement}
+  Prove that $z^4+2z^3-2z+10=0$ has exactly one root in each open quadrant. 
+\end{statement}
+\begin{newproof}
+  First note that it is sufficient to prove the existence of exactly one root in $Q_1$, because conjugate 
+  pairs proves the existence in the other open quadrant. We know the polynomial is entire, so we can use the 
+  argument principle to count the zeroes. Let $\gamma$ be made up of 
+  \begin{align*}
+    \gamma_1 &= [0,R] \\
+    \gamma_2 &= Re^{it} \text{ for } t \in [0, \pi / 2] \\
+    \gamma_ 3 &= i[0,R].
+  \end{align*}
+  Then we can consider 
+  \begin{equation*}
+    Z_f = \frac{1}{2\pi i} \int_{\gamma} \partial^{\log} f(z)dz = \Delta_{\gamma}\text{Arg}(f).
+  \end{equation*}
+  Then for each part of gamma, 
+  \begin{align*}
+    \Delta_{\gamma_1}\text{Arg}(f) &= 0 \\
+    \Delta_{\gamma_2}\text{Arg}(f) &= 4(\frac{\pi}{2}) = 2\pi \\
+    \Delta_{\gamma_3}\text{Arg}(f) &=0.
+  \end{align*}
+  To prove the last part, consider $f(it)=t^4-it^3-2it+10=t^4(1-it^{-1}-2it^{-2}+10t^{-4})$.
+  \par Thus $\Delta_{\gamma}\text{Arg}(f)=1$, so as $R \to \infty$, there is only 1 zero. 
+\end{newproof}
+
 \end{document}
