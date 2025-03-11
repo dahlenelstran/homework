@@ -1,0 +1,171 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,outlines}
+\usepackage{graphicx,tikzsymbols,tcolorbox}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand\qedsymbol{$\blacksquare$}
+\tcbuselibrary{most}
+
+% Defining new environments
+
+\newtcolorbox{newtitle}{
+  enhanced,
+  colframe=black,
+  colback=white,
+  boxsep=5pt,
+  arc=8pt,
+  sharp corners=south,
+  borderline={0.5pt}{0pt}{black},
+  borderline={1.8pt}{-5pt}{black},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter, number within=section]{theorem}[2][title]{
+  enhanced,
+  title={Theorem \thetcbcounter \if\relax\detokenize{#2}\relax\else\ (#2)\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{definition}{
+  enhanced,
+  title={Definition \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{fact}{
+  enhanced,
+  title={Fact \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{notation}{
+  enhanced,
+  title={Notation},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{newproof}{
+  enhanced,
+  frame hidden,
+  colback=white,
+  title={Proof.},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{black},
+  after upper={\hfill $\blacksquare$},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter, number within=section]{uq}{
+  enhanced,
+  title=Question,
+  colframe=red,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{aq}{
+  enhanced,
+  title=Question,
+  colframe=green!50!black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{answer}{
+  enhanced,
+  frame hidden,
+  colback=white,
+  colframe=green!50!black,
+  title={Answer},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{green!50!black}
+}
+
+% Redefine section as well
+
+% Renew commands later
+
+\begin{document}
+
+\subsection{Basic Constructions}
+
+\textbf{REORDER THIS}
+
+A simple distinction between being homeomorphic, homotopic, and homotopy equivalent:
+\begin{itemize}
+  \item A \textbf{homeomorphism} is the strongest of the three-- two spaces being homeomorphic means that 
+    there is a bijctive coorespondance between the spaces themselves, and between the open sets of the 
+    spaces. For two spaces to be homeomorphic, there must exist a function $f$ between them such that 
+    \subitem $f$ is continuous
+    \subitem $f$ is bijective
+    \subitem the inverse function $f^{-1}$ is also continuous
+  \item A \textbf{homotopy} is a continuous deformation between two continuous functions. 
+\end{itemize}
+
+\subsection{Van Kampen's Theorem}
+
+\subsection{Covering Spaces}
+
+\begin{definition}
+  A \textbf{covering space} of a space $X$ is a space $\tilde{X}$ together with a map $\tilde{p} \tilde{X} \to X$ 
+  satisfying the following condition: Each point $x \in X$ has an open neighborhood $U$ in $X$ such that 
+  $p^{-1}(U)$ is a union of disjoint open sets in $\tilde{X}$, each of which is mapped homeomorphically 
+  onto $U$ by $p$.
+\end{definition}
+
+\begin{aq}
+  What does it mean for something to be mapped homeomorphically?
+\end{aq}
+
+\begin{answer}
+  All it means is that $p$ is a homeomorphism-- which, if you'll recall from the beginning of the class, 
+  just means that it is continuous, bijective, and has a continuous inverse. 
+\end{answer}
+
+All this is saying is that there is a space such that 
+
+\section{Homology}
+
+\subsection{Simplicial and Singular Homology}
+
+\end{document}
