@@ -63,7 +63,7 @@
 \end{statement}
 \begin{newproof}
   To find the zeroes, set Euler's Formula to zero:
-  $$ \frac{e^{i \pi z}-e^{-i \pi z}}{2i} = 0 $$.
+  $$ \frac{e^{i \pi z}-e^{-i \pi z}}{2i} = 0. $$
   From here, we can find that 
   \begin{align*}
     e^{i \pi z} - e^{-i \pi z} &= 0 \\
@@ -79,8 +79,20 @@
   So in our case, 
   $$ \text{Res}(\frac{1}{\sin \pi z}, n) = \lim_{z \to n} (z-n) \cdot \frac{1}{\sin \pi z}, $$
   where $n \in \mathbb{Z}$. 
+  We know that near $z=n$, $\sin \pi z$ can be approximated using a Taylor Expansion, so that 
+  $$ \frac{1}{\sin \pi z} \approx \frac{1}{\pi (z-n)(-1)^n}. $$
+  Therefore we find that 
+  $$ \text{Res}(\frac{1}{\sin \pi z}, n ) = \frac{1}{\pi (-1)^n}. $$
 \end{newproof}
 
+\begin{statement}
+  Evaluate the inegral 
+  $$ \int^{\infty}_{-\infty} \frac{dx}{1+x^4}. $$
+  Where are the poles of $1/(1+z^4)$?
+\end{statement}
+\begin{newproof}
+  
+\end{newproof}
 
 \section*{Tie Problems}
 
