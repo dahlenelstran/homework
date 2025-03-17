@@ -56,8 +56,30 @@
 \section*{Stein Problems}
 
 \begin{statement}
-
+  Using Euler's Formula
+  $$ \sin \pi z = \frac{e^{i \pi z}-e^{-i \pi z}}{2i}, $$
+  show that the complex zeroes of $\sin \pi z$ are exactly the integers, and that they are each of order 1. 
+  \par Calculate the residue of $1/\sin \pi z$ at $z=n \in \mathbb{Z}$. 
 \end{statement}
+\begin{newproof}
+  To find the zeroes, set Euler's Formula to zero:
+  $$ \frac{e^{i \pi z}-e^{-i \pi z}}{2i} = 0 $$.
+  From here, we can find that 
+  \begin{align*}
+    e^{i \pi z} - e^{-i \pi z} &= 0 \\
+    e^{i \pi z} &= e^{-i \pi z} \\ 
+    i \pi z &= -i \pi z + 2 \pi i k , k \in \mathbb{Z} \\
+    2i \pi z &= 2 i \pi k,
+  \end{align*}
+  so that $z = k$, meaning $z$ must be an integer. 
+  \par To show that they are all of order one, we can find the derivate of $\sin \pi z$ to be 
+  $ \pi \cos \pi z$, and notice that this is nonzero for any integer. 
+  \par To find the residue of $1 / \sin \pi z$ at $z$ an integer, we can use this formula:
+  $$ \text{Res}(f,a)=\lim_{z \to a} (z-a)(f(z)). $$
+  So in our case, 
+  $$ \text{Res}(\frac{1}{\sin \pi z}, n) = \lim_{z \to n} (z-n) \cdot \frac{1}{\sin \pi z}, $$
+  where $n \in \mathbb{Z}$. 
+\end{newproof}
 
 
 \section*{Tie Problems}
