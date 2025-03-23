@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
  
-\usepackage[margin=1in]{geometry} 
+\usepackage[margin=.5in]{geometry} 
 \usepackage{amsmath,amsthm,amssymb,outlines}
 \usepackage{graphicx,tikzsymbols,tcolorbox}
 \renewcommand\qedsymbol{$\blacksquare$}
@@ -18,9 +18,9 @@
   after skip=30pt
 }
 
-\newtcolorbox[auto counter]{statement}{
+\newtcolorbox[auto counter]{statement}[1][]{
   enhanced,
-  title={Exercise \thetcbcounter},
+  title={Exercise \ifx\\#1\\\thetcbcounter\else#1\fi},
   colframe=black,
   colback=white,
   colbacktitle=white,
@@ -32,6 +32,7 @@
 
 \newtcolorbox{newproof}{
   enhanced,
+  breakable,
   frame hidden,
   colback=white,
   title={Proof.},
