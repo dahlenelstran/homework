@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Arch Linux) (preloaded format=pdflatex 2025.3.18)  23 MAR 2025 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.24)  24 MAR 2025 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -718,14 +718,14 @@ L3 programming layer <2025-01-18>
  ) 
 Here is how much of TeX's memory you used:
  23028 strings out of 475171
- 503601 string characters out of 5767103
+ 503609 string characters out of 5767095
  965946 words of memory out of 5000000
  45631 multiletter control sequences out of 15000+600000
  565039 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,12n,105p,486b,1329s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/dahlen/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW3.pdf (16 pages, 243931 bytes).
+Output written on HW3.pdf (16 pages, 243937 bytes).
 PDF statistics:
  168 PDF objects out of 1000 (max. 8388607)
  96 compressed objects within 1 object stream
