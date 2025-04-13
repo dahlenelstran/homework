@@ -22,6 +22,7 @@
 
 \newtcolorbox[auto counter]{statement}[1][]{
   enhanced,
+  breakable,
   title={Exercise \ifx\\#1\\\thetcbcounter\else#1\fi},
   colframe=black,
   colback=white,
