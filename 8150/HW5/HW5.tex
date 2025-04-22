@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=.5in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,outlines}
+\usepackage{graphicx,tikzsymbols,tcolorbox}
+\renewcommand\qedsymbol{$\blacksquare$}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\tcbuselibrary{most}
+
+\newtcolorbox{newtitle}{
+  enhanced,
+  colframe=black,
+  colback=white,
+  boxsep=5pt,
+  arc=8pt,
+  sharp corners=south,
+  borderline={0.5pt}{0pt}{black},
+  borderline={1.8pt}{-5pt}{black},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter]{statement}[1][]{
+  enhanced,
+  breakable,
+  title={Exercise \ifx\\#1\\\thetcbcounter\else#1\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{newproof}{
+  enhanced,
+  breakable,
+  frame hidden,
+  colback=white,
+  title={Proof.},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{black},
+  after upper={\hfill $\blacksquare$}
+}
+
+\begin{document}
+
+\begin{newtitle}
+  \begin{center}
+    \textbf{\Huge Homework}
+  \end{center}
+  \textbf{Dahlen Elstran} \hfill \textbf{\today}
+\end{newtitle}
+
+\section{Stein Problems}
+
+\begin{statement}[8.5.1]
+  A holomorphic mapping $f: U \to V$ is a \textbf{local bijection} on $U$ if for every $z \in U$ there exists an 
+  open disc $D \subset U$ centered at $z$, so that $f: D \to f(D)$ is a bijection. Prove that a holomorphic 
+  map $f:U \to V$ is a local bijection on $U$ if and only if $f'(z) \neq 0$ for all $z \in U$. 
+\end{statement}
+\begin{newproof}
+  Let $U,V \subset \C$ be open and $f:U\to V$ holomorphic.  
+  We shall prove that  
+
+  $$
+     f \text{ is a local bijection on }U 
+     \;\Longleftrightarrow\;
+     f'(z)\neq0 \text{ for every }z\in U .
+  $$
+
+  \smallskip
+  \textbf{($\Rightarrow$)  Local bijection $\;\Longrightarrow\; f'\not\equiv0$.}
+
+  \begin{itemize}
+    \item Fix $z_0\in U$.  
+          Assume for contradiction that $f'(z_0)=0$.  
+          Write the Taylor expansion at $z_0$:
+          $$
+            f(z)=f(z_0)+a_k\,(z-z_0)^k+\cdots ,
+            \qquad 
+            a_k\neq0,\; k\ge2 .
+          $$
+    \item Choose $\rho>0$ so small that the closed disc
+          $\overline{D_\rho}(z_0)\subset U$ and  
+          $|f(z)-f(z_0)|<\tfrac12|a_k|\rho^k$ for $|z-z_0|\le\rho$ 
+          (uniform continuity of higher–order terms).
+    \item For $\zeta=e^{2\pi i/k}$ set  
+          $z_1=z_0+\rho$ and $z_2=z_0+\rho\zeta$.  
+          Then $|z_1-z_0|=|z_2-z_0|=\rho$ but $z_1\neq z_2$ and
+          $$
+            f(z_j)=f(z_0)+a_k\rho^k+R_j,\qquad |R_j|<\frac12|a_k|\rho^k ,
+          $$
+          so $|f(z_j)-f(z_0)-a_k\rho^k|<\frac12|a_k|\rho^k$ for $j=1,2$.  
+          By the triangle inequality $f(z_1)=f(z_2)$.
+    \item Hence $f$ is \emph{not} injective on any disc about $z_0$, contradicting the hypothesis that $f$ is a local bijection.
+          Therefore $f'(z_0)\neq0$.  Since $z_0$ was arbitrary, $f'(z)\neq0$ for all $z\in U$.
+  \end{itemize}
+
+  \smallskip
+  \textbf{($\Leftarrow$)  Non‑vanishing derivative $\;\Longrightarrow\;$ local bijection.}
+
+  \begin{itemize}
+    \item Let $z_0\in U$ with $f'(z_0)\neq0$.  
+          By the \emph{holomorphic inverse function theorem} (or the open mapping theorem plus the implicit function theorem)
+          there exists $r>0$ such that the restricted map
+          $$
+            f:\; D_r(z_0)\;\longrightarrow\; f(D_r(z_0))
+          $$
+          is biholomorphic; in particular it is bijective onto an open disc $f(D_r(z_0))\subset V$.
+    \item Because $z_0$ was arbitrary, the same holds around every point of $U$, so $f$ is a local bijection on $U$.
+  \end{itemize}
+
+  \smallskip
+  \textbf{Conclusion.}  
+  A holomorphic map $f:U\to V$ is a local bijection on $U$ \emph{iff} its derivative never vanishes on $U$.
+\end{newproof}
+
+
+\begin{statement}[8.5.2]
+  Suppose $F(z)$ is holomorphic near $z=z_0$ and $F(z_0)=F'(z_0)=0$, while $F''(z_0) \neq 0$. Show that 
+  there are two curves $\Gamma_1$ and $\Gamma_2$ that pass through $z_0$, are orthogonal at 
+  $z_0$, and so that $F$ restricted to $\Gamma_1$ is real and has a minimum at $z_0$, while $F$ 
+  restricted to $\Gamma_2$ is also real but has a maximum at $z_0$. 
+\end{statement}
+\begin{newproof}
+  
+\end{newproof}
+
+\section{Tie Problems}
+
+\end{document}
