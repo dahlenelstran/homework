@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1745279453.42543 "HW10.tex" "HW10.pdf" "HW10" 1745279454.34514 0
+["pdflatex"] 1745379115.49079 "HW10.tex" "HW10.pdf" "HW10" 1745379116.27429 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742685315 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1742685315 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -19,8 +19,13 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1742685315 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1742685315 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1742685315 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1742685315 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1742685315 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1742685315 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1742685315 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1742685315 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1742685315 31764 459c573c03a4949a528c2cc7f557e217 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1742685315 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1742685315 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/iftex/iftex.sty" 1742685315 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty" 1742685315 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -166,8 +171,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1742859370 30070 2c390b00126b1036e8876b6c3ea4d747 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1742859320 2008245 fe65f3ac96f3e1ee02ab4fb8e0e290d9 ""
-  "HW10.aux" 1745279454.26234 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "HW10.tex" 1745279447.25285 1554 634ba7b19ed2050c095b18290628e115 ""
+  "HW10.aux" 1745379116.20061 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "HW10.tex" 1745379113.6446 4614 5c290f61131d43912c1f444e6746bc20 ""
   (generated)
   "HW10.aux"
   "HW10.log"
