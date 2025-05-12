@@ -97,15 +97,24 @@
     H_3(X) \cong \text{ker}(g) \text{ / im}(f) \\
   \end{align*}
   with all other homology groups for $n > 2$ zero.
-  \par We can use a similar logic as the last time to find everything but the map $h$ (note that although we have increased 
-  dimension, the 3-cell still "wraps around" the $S^2$ equator twice, similar to before). So we have 
+  \par We can use a similar logic as the last time to find everything but the map $h$. Note that we also have to adjust the map $g$, 
+  because although the 3-cell "wraps around" twice,  they are in opposite directions, so that the generators of $\Z \oplus \Z$ actually 
+  map to $0$, so that $g$ is the $0$ map. So we have 
   \begin{align*}
     H_0(X) \cong \text{ker}(\psi) \text{ / im}(\phi) \cong \Z / 0 \cong \Z \\
     H_1(X) \cong \text{ker}(\phi) \text{ / im}(h) \cong \Z /\text{im}(h) \\
-    H_2(X) \cong \text{ker}(h) \text{ / im}(g) \cong \text{ker}(h) / 2\Z \\
-    H_3(X) \cong \text{ker}(g) \text{ / im}(f) \cong \Z / 0 \cong \Z \\
+    H_2(X) \cong \text{ker}(h) \text{ / im}(g) \cong \text{ker}(h) / 0 \\
+    H_3(X) \cong \text{ker}(g) \text{ / im}(f) \cong \Z \oplus \Z / 0 \cong \Z \oplus \Z \\
   \end{align*}
-  For the map $h$, as it maps the 2-cell to the 1-cell, 
+  For the map $h$, as it maps the 2-cell to the 1-cell, it's similar to before where because of the identification, where the 
+  2-cell wraps around the 1-cell twice, so that the degree of $h$ is 2. Because it's from $\Z$ to $\Z$, it's image must be $2 \Z$ 
+  and it's kernel is $0$. Thus we are left with:
+  \begin{align*}
+    H_0(X) \cong \Z \\
+    H_1(X) \cong \Z / 2 \Z \\
+    H_2(X) \cong 0 \\
+    H_3(X) \cong \Z \oplus \Z \\
+  \end{align*}
 \end{newproof}
 
 \end{document}
