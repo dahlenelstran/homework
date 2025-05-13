@@ -1,4 +1,4 @@
-PWD /home/dce71310/homework/8200/HW9
+PWD /home/dahlen/homework/old/8200/HW9
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT HW9.tex
@@ -284,7 +284,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 INPUT /usr/share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 INPUT /usr/share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
@@ -292,8 +291,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/bbm/bbm12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/bbm/bbm8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/bbm/bbm6.tfm
 INPUT HW9.aux
-INPUT /home/dce71310/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk
-INPUT /home/dce71310/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
+INPUT /home/dahlen/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk
+INPUT /home/dahlen/.texlive/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
@@ -302,6 +301,5 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

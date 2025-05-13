@@ -1,4 +1,4 @@
-PWD /home/dce71310/homework/8150/notes
+PWD /home/dahlen/homework/old/8150/notes
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT notes.tex
