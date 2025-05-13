@@ -1,0 +1,559 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,outlines}
+\usepackage{graphicx,tikzsymbols,tcolorbox}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand\qedsymbol{$\blacksquare$}
+\tcbuselibrary{most}
+
+% Defining new environments
+
+\newtcolorbox{newtitle}{
+  enhanced,
+  colframe=black,
+  colback=white,
+  boxsep=5pt,
+  arc=8pt,
+  sharp corners=south,
+  borderline={0.5pt}{0pt}{black},
+  borderline={1.8pt}{-5pt}{black},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter, number within=section]{theorem}[2][title]{
+  enhanced,
+title={Theorem \thetcbcounter \if\relax\detokenize{#2}\relax\else\ (#2)\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{definition}{
+  enhanced,
+  title={Definition \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{fact}{
+  enhanced,
+  title={Fact \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{notation}{
+  enhanced,
+  title={Notation},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{newproof}{
+  enhanced,
+  frame hidden,
+  colback=white,
+  title={Proof.},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{black},
+  after upper={\hfill $\blacksquare$},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter, number within=section]{uq}{
+  enhanced,
+  title=Question,
+  colframe=red,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{aq}{
+  enhanced,
+  title=Question,
+  colframe=green!50!black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{answer}{
+  enhanced,
+  frame hidden,
+  colback=white,
+  colframe=green!50!black,
+  title={Answer},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{green!50!black}
+}
+
+\newtcolorbox{sectionbox}{
+  colback=black!10,
+  colframe=black, 
+  fonttitle=\bfseries\Large, 
+  arc=4mm, 
+  width=\textwidth
+}
+
+% Redefine section as well
+
+% Renew commands later
+
+\begin{document}
+
+\begin{newtitle}
+  \begin{center}
+    \textbf{\Huge Complex Analysis Notes}
+  \end{center}
+  \textbf{Dahlen Elstran} \hfill \textbf{\today} \\
+  Dr. Jingzhi Tie \hfill Spring 2025
+\end{newtitle}
+
+\section*{Introduction}
+
+Let us begin by noting that every complex number $z$ can be written as $z=x+iy$, where $x,y \in \mathbb{R}$.
+
+\begin{definition}
+  A function is \textbf{holomorphic} at the point $z \in \mathbb{C}$ if the limit 
+  \begin{equation*}
+    \lim_{h \to 0} \frac{f(z+h)-f(z)}{h}, \text{ where } h \in \mathbb{C}
+  \end{equation*}
+  exists.
+\end{definition}
+
+\begin{aq}
+  So is this just being differentiable for complex numbers?
+\end{aq}
+\begin{answer}
+  Essentially, however because complex numbers have a value (radius) and an angle, $h$ can approach 0 from 
+  infinitely many angles. So holomorphicity is much stronger than differentiablity; In the real case, it 
+  is differentiable going left and right. For a function to be holomorphic at a point, it must be differentiable 
+  from infinitely many angles.
+\end{answer}
+
+\begin{fact}
+  If $f$ is holomorphic in $\Omega$, then for appropriate closed paths in $\Omega$, 
+  \begin{equation*}
+    \int_{\gamma} f(z)dz=0.
+  \end{equation*}
+\end{fact}
+
+\begin{fact}
+  If $f$ is holomorphic, then $f$ is indefinitely differentiable.
+\end{fact}
+
+\begin{uq}
+  Why indefinitely differentiable? Why not indefinitely holomorphic?
+\end{uq}
+
+\begin{fact}
+  If $f$ and $g$ are holomorphic functions in $\Omega$ which are equal in an arbitrarily samll disc in 
+  $\omega$, then $f=g$ everywhere in $\Omega$.
+\end{fact}
+
+\begin{definition}
+  The \textbf{zeta function},
+  \begin{equation*}
+    \zeta (s)=\sum^{\infty}_{n=1} \frac{1}{n^s}
+  \end{equation*}
+  is holomorphic in the half-plane Re($s$) $> 1$.
+\end{definition}
+
+\begin{definition}
+  The \textbf{theta function} is the following:
+  \begin{equation*}
+    \Theta (z \vert \tau) = \sum^{\infty}_{n=-\infty} e^{\pi i n^2 \tau}e^{2\pi i n z}
+  \end{equation*}
+\end{definition}
+
+\section{Preliminaries to Complex Analysis}
+
+\subsection{Complex Numbers and the Complex Plane}
+
+We can imagine complex numbers as an ordered pair of the two real numbers:
+  
+\par \begin{center} \includegraphics[scale=.2]{1-1.png} \end{center}
+
+Addition and mulitplication are defined like so:
+
+\begin{align*}
+  z_1+z_2 &= (x_1+x_2)+i(y_1+y_2) \\
+  z_1 * z_2 &= (x_1x_2 - y_1y_2) + i (x_1y_2+y_1x_2)
+\end{align*}
+
+It is easy to prove that commutativity, associativity, and distributivity hold for complex numbers. 
+We can think about addition like adding two vectors in $\mathbb{R}^2$, and mulitplication like 
+a rotation and dilation.
+
+\begin{definition}
+  The length, or absolute value of a complex number, is defined as the following:
+  \begin{equation*}
+    \vert z \vert = (x^2 + y^2)^{1/2}
+  \end{equation*}
+\end{definition}
+
+Note that this is the same as taking the norm, or length, of a vector in $\mathbb{R}^2$, or even 
+finding the length of the hypotenuse that is created by the $x$ and $y$ values.
+
+\par The triangle equality holds: 
+
+\begin{theorem}{Triangle Inequality}
+  \begin{equation*}
+    \vert z + w \vert \leq \vert z \vert + \vert w \vert
+  \end{equation*}
+  for all $z,x \in \mathbb{C}$.
+\end{theorem}
+
+From the triangle inequality, there comes this helpful fact as well:
+
+\begin{fact}
+  \begin{equation*}
+    \vert \vert z \vert - \vert w \vert \vert \leq \vert z - w \vert 
+  \end{equation*}
+\end{fact}
+
+You can imagine a complex conjugate, $\bar{z} = x - iy$, as a reflection across the real (horizontal) axis.
+
+\par The following are also useful facts easily deduced:
+
+\begin{fact}
+  \begin{equation*}
+    \text{Re} (z) = \frac{z+\bar{z}}{2} \text{ and } \text{Im} (z) = \frac{z-\bar{z}}{2i}
+  \end{equation*}
+\end{fact}
+
+\begin{fact}
+  \begin{equation*}
+  \vert z \vert = z \bar{z} \text{ and, when } z \neq 0 \text{, } \frac{1}{z} = {\bar{z}}{\vert z \vert ^2}
+  \end{equation*}
+\end{fact}
+
+\begin{definition}
+  A complex number $z$'s \textbf{polar form} is written as $z=re^{i \theta}$, where $r > 0$, and 
+  $\theta$ is referred to as the \textbf{argument} of $z$.
+\end{definition}
+
+A mathematical fact useful in Complex Analysis is $e^{i \theta} = \cos{\theta} + i \sin{\theta}$.
+
+From the two previous statements, we can see that $r=\vert z \vert$, the length of $z$, and $\theta$ is the angle. 
+
+\par \begin{center} \includegraphics[scale=.2]{1-2.png} \end{center}
+
+With this form, we can redefine mulitplication to be:
+
+\begin{equation*}
+  z = re^{i \theta}, w=se^{i \phi} \implies zw=rse^{i(\theta + \phi)}\
+\end{equation*}
+
+It is easier to see in this definition that mulitplication is simply a rotation ($\theta + \phi$), and 
+a dilation ($rs$).
+
+\begin{definition}
+  A sequence $\{z_1, z_2, \dots \}$ of complex numbers is said to \textbf{converge} 
+  to $w \in \mathbb{C}$ if 
+  $$ \lim_{n \to \infty} \vert z_n - w \vert = 0 \text{ or,equivalently, } w = \lim_{n \to \infty} z_n. $$
+\end{definition}
+
+\begin{aq}
+  Is this just the same thing as being convergent in $\mathbb{R}$? Just that the limit is a complex 
+  number, not a real one?
+\end{aq}
+
+\begin{answer}
+  Stein states that $z_n$ converges to $w$ if and only if the sequence of the real and imaginary parts
+  of $z_n$ converge to the real and imaginary parts of $w$. This makes sense, as in real convergence, 
+  it converges to a $y$ value, but in the complex plane, it must converge from the $x$ (real) direction, 
+  and the $y$ (imaginary) direction.
+\end{answer}
+
+\begin{uq}
+  Given the previous answer, is it possible for a complex sequence to converge in the real direction 
+  much sooner than the imaginary? Does the difference in "convergence speed" matter?
+\end{uq}
+
+\begin{definition}
+  A sequence $\{ z_n \}$ is said to be a \textbf{Cauchy Sequence} if 
+  $$ \vert z_n - z_m \vert \to 0 \text{ as } n,m \to \infty .$$
+\end{definition}
+
+Similarly to Real Analysis, a sequence is Cauchy if it's elements get closer and closer together 
+as the sequence reaches infinity. 
+
+\begin{aq}
+  How can a sequence be convergent, but not Cauchy?
+\end{aq}
+\begin{answer}
+  Being convergent always implies the sequence is Cauchy, because if the elements get farther away from each 
+  other, they can never approach a limit. But it is possible for a sequence to be Cauchy and not convergent. 
+  This is because being Cauchy doesn't specify a value for the limit; it is possible the Cauchy sequence is 
+  approaching a value outside whatever space we're discussing. Thus from our scope (only considering our space 
+  missing the limit value), the sequence is not convergent.
+\end{answer}
+
+Similar to convergence, the sequence $\{z_n\}$ is Cauchy if and only if the real and imaginary parts are. 
+
+\begin{definition}
+  A space is \textbf{complete} if every Cauchy sequence converges to a point in the space. 
+\end{definition}
+
+\begin{theorem}{}
+  The complex numbers $\mathbb{C}$ is complete.
+\end{theorem}
+\begin{newproof}
+  Because $\mathbb{R}$ is complete, we know every real Cauchy sequence has a limit in $\mathbb{R}$. Thus 
+  the real and imaginary parts of any Cauchy sequence must converge, so $\{z_n\}$ must converge as well. 
+\end{newproof}
+
+\begin{definition}
+  If $z_0 \in \mathbb{C}$ and $r > 0$, we define the \textbf{open disc $D_r(z_0)$ of radius $r$ centered 
+  at $z_0$} to be the set of all complex numbers that are at absolute value strictly less than 
+  $r$ from $z_0$. Alternatively,
+  $$ D_r(z_0)=\{z \in \mathbb{C} : \vert z - z_0 \vert < r \} $$
+\end{definition}
+
+An open disc is just a circle of radius $r$, centered at $x_0$, with no "edge". It's called the "open circle" 
+because it is an open set. 
+
+\begin{definition}
+  Similarly, a \textbf{closed disc} is defined as 
+  $$ \bar{D}_r(z_0)=\{z \in \mathbb{C} : \vert z - z_0 \vert \leq r \} $$
+\end{definition}
+
+This is just a disc including the boundary, so it is a closed set. 
+
+\begin{definition}
+  As you can imagine, the \textbf{boundary of a disc} is defined as so:
+  $$ C_r(z_0)=\{z \in \mathbb{C} : \vert z - z_0 \vert = r \} $$
+\end{definition}
+
+\begin{notation}
+  The \textbf{unit disc} is defined as the following:
+  $$ \mathbb{D} = \{ z \in \mathbb{C} : \vert z \vert < 1 \} $$
+\end{notation}
+
+This is just an open disc centered at the origin of radius one. 
+
+\begin{definition}
+  Given a set $\Omega \subset \mathbb{C}$, a point $z_0$ is an \textbf{interior point} of $\Omega$ if there 
+  exists $r > 0$ such that $D_r(z_0) \subset \Omega$.
+\end{definition}
+
+\begin{definition}
+  The \textbf{interior} of a set consists of all it's interior points.
+\end{definition}
+
+\begin{aq}
+  So is the interior just everything other than the boundary and exterior? Meaning an open disc is equivalent to
+  it's interior?
+\end{aq}
+\begin{answer}
+  Yes. :)
+\end{answer}
+
+\begin{definition}
+  A set if \textbf{open} if every point in that set is an interior point. Similarly, a set is \textbf{closed} 
+  if it's complement $\Omega^c = \mathbb{C} - \Omega$ is open.
+\end{definition}
+
+Note that $\Omega^c = \mathbb{C} - \Omega$ is just the exterior of the set. So if the exterior is open, then 
+$\Omega$ must include it's boundary.
+
+\begin{definition}
+  A point $z \in \mathbb{C}$ is said to be a \textbf{limit point} of the set $\Omega$ if there exists a sequence 
+  of points $z_n \in \Omega$ such that $z_n \neq z$ and $\lim_{n \to \infty} z_n = z$. 
+\end{definition}
+
+So an example of a limit point would be a point in the boundary. It is worth noting that a set is closed 
+if and only if it contains all it's limit points (boundary points).
+
+\begin{definition}
+  The \textbf{closure} of any set $\Omega$ is the union of $\Omega$ and its limit points, and is often denoted 
+  by $\bar{\Omega}$. 
+\end{definition}
+
+So in an open set, the closure would be the set and it's boundary (what could be added to the set 
+to make it closed). In a closed set, the closure is just the set itself. 
+
+\begin{definition} 
+  The \textbf{boundary} of a set $\Omega$ is equal to its closure minus its interior, and is often 
+  denotes by $\delta \Omega$.
+\end{definition}
+
+So the boundary is just the set of limit points. 
+
+\begin{definition}
+  A set $\Omega$ is \textbf{bounded} if there exists $M > 0$ such that $\vert z \vert < M$ whenever $z \in
+  \Omega$. 
+\end{definition}
+
+So it is the same as being bounded in Real Analysis, just instead of a horizontal line at height $M$, 
+it is a disc with radius $M$ centered at the origin. 
+
+\begin{definition}
+  If $\Omega$ is bounded, we define its \textbf{diameter} by 
+  $$ \text{diam}(\Omega) = \sup_{z,w \in \Omega} \vert z - w \vert $$
+\end{definition}
+
+So the diameter is just the furthest straight line you can draw between any two points. 
+
+\begin{definition}
+  A set $\Omega$ is said to be \textbf{compact} if it is closed and bounded.
+\end{definition}
+
+Note that this is the same definition as Real Analysis.
+
+\begin{theorem}{}
+  The set $\Omega \subset \mathbb{C}$ is compact if and only if every sequence $\{ z_n \} \subset \Omega$ 
+  has a subsequence that converges to a point in $\Omega$.
+\end{theorem}
+
+This is just saying that every sequence in the set can be "cut off" at a point and still converge
+in the set.
+
+\begin{newproof}
+  This follows from the similar statement in Real Analysis, and the correspondence between convergence in
+  the real and complex plane.
+\end{newproof}
+
+\begin{definition}
+  An \textbf{open covering} of $\Omega$ is a family of open sets $\{ U_{\alpha}\}$ such that 
+    $\Omega \subset \bigcup_{\alpha} U_{\alpha}$.
+\end{definition}
+
+An open covering is just any set of open discs that completely cover the set on the complex plane. Here's 
+how I visualize it:
+
+\par \begin{center} \includegraphics[scale=.2]{1-3.png} \end{center}
+
+where both the red and blue parts are different subcovers. Note that a subcover can have 
+uncountably many open sets.
+
+\begin{theorem}{}
+  A set $\Omega$ is compact if and only if every open covering has a finite subcovering.
+\end{theorem}
+
+This is similar to the statement in Real Analysis, and can be proved using that. But the general idea 
+is that if a set is compact, it's not infinite in size (more accurately, diameter), and it's closed. If
+this is the case, then clearly you can have a finite subcovering of any open cover. 
+
+\begin{uq}
+  May want to look back at a proof of this. I'm not understanding why an open cover of infinitely many balls 
+  around points would have a finite subcover, if the set itself is infinite.
+\end{uq}
+
+\begin{theorem}{}
+  If $\Omega_1 \subset \Omega_2 \subset \dots \subset \Omega_n \subset \cdots$ is a sequence of 
+  non-empty compact sets in $\mathbb{C}$ with the property that $\text{diam}(\Omega_n) \to 0$ 
+  as $n \to \infty$, then there exists a unique point $w \in \mathbb{C}$ such that $w \in \Omega_n$ 
+  for all $n$.
+\end{theorem}
+
+Visually, this is saying if you have a bunch of circles containing each other that get smaller and smaller, 
+there must be some point in the center, where the smallest circles are, and there must only be one. 
+
+\begin{newproof}
+  Let $z_n$ be a point in each $\Omega_n$. Because $\text{diam}(\Omega_n) \to 0$, then 
+  $\sup_{z,w \in \Omega_n} \vert z - w \vert \to 0$, by the definition of a diameter. Thus $\{ z_n \}$ is 
+  a Cauchy sequence, because the points are getting closer and closer together. Thus it must converge, and 
+  call this value $w$. Because each set is compact, we must have $w$ (a limit point), be in each set. If there 
+  were another point satisfying this, call it $w'$, then the diameter between them would be nonzero, which is 
+  a contradiction.
+\end{newproof}
+
+\begin{definition}
+  An open set $\Omega \subset \C$ is said to be \textbf{connected} if it is not possible to find two disjoint 
+  non-empty open sets $\Omega_1$ and $\Omega_2$ such that $\Omega = \Omega_1 \cap \Omega_2$. 
+  Similarly, a closed set $F$ is connected if one cannot write $F = F_1 \cup F_2$ where $F_1$ and 
+  $F_2$ are disjoint non-empty closed sets.
+\end{definition}
+
+If a set cannot be broken up into two disjoint open sets, there must be some "overlap". Connectedness 
+is a  simple as it sounds.
+
+{\Huge THIS IS WHERE I LEFT OFF}
+
+\section{Meromorphic Functions and the Logarithm}
+
+\subsection{Zeros and Poles}
+
+\begin{definition}
+  A \textbf{point singularity} of a function $f$ is a complex number $z_0$ such that $f$ is defined in a 
+  neighborhood of $z_0$ but not at the point $z_0$ itself. This is also called an \textbf{isolated singularity}.
+\end{definition}
+
+An exmple of this could be the function $f$ that is defined on the punctured plane by $f(z)=z$. Then the 
+origin is a point of singularity, unless we explicitly define $f(0)=0$. 
+
+\begin{uq}
+  So I'm confused-- why can't $f(0)=0$ naturally? What happens at $z=0$?
+\end{uq}
+
+Because the "issue" can be solved by explicitly defining the one point, we can call that singularity \textbf{removable}.
+
+\par Another example is $f(z)=\frac{1}{z}$. This singularity (also at $z=0$) is called a \textbf{pole singularity}
+because the function approaches infinity from the left and the right of the singularity.
+
+\par A more complicated example is $f(z)=e^{i/z}$, which can not be explained by poles or removable singularities because 
+the limits from the left and right on the real axis are not equal.
+
+\begin{definition}
+  A complex number $z_0$ is a \textbf{zero} for the holomorphic function $f$ if $f(z_0)=0$.
+\end{definition}
+
+Riveting, who could have guessed.
+
+Note that if $f$ is holomorphic in $\Omega$ and $f(z_0)=0$ for some $z_0 \in \Omega$, then there exists an 
+open neighborhood $U$ of $z_0$ such tht $f(z) \neq 0$ for all $z \in U - \{ z_0\}$, unless $f$ 
+is identically zero.
+
+\begin{theorem}{}
+  Suppose that $f$ is holomorphic in a connected open set $\Omega$, has a zero at a point $z_0 \in \Omega$, and does not 
+  vanish identically in $\Omega$. Then there exists a neighborhood $U \subset \Omega$ of $z_0$, a 
+  nonvanishing holomorphic function $g$ on $U$, and a unique positive integer $n$ such that
+  $$ f(z) = (z-z_0)^ng(z) \text{ for all } z \in U. $$
+\end{theorem}
+
+So all this is saying is that if there is a zero in a nonzero holomorphic function, the function in a neighborhood 
+of this point can be written in the above form.
+
+\begin{newproof}
+  Bruh go back and fill this out!!!!
+\end{newproof}
+
+
+
+\end{document}

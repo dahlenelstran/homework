@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=.5in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,outlines}
+\usepackage{graphicx,tikzsymbols,tcolorbox}
+\renewcommand\qedsymbol{$\blacksquare$}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\tcbuselibrary{most}
+
+\newtcolorbox{newtitle}{
+  enhanced,
+  colframe=black,
+  colback=white,
+  boxsep=5pt,
+  arc=8pt,
+  borderline={0.5pt}{0pt}{black},
+  borderline={1.8pt}{-5pt}{black},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter]{hatcher}[1][]{
+  enhanced,
+  breakable,
+  title={Hatcher \ifx\\#1\\\thetcbcounter\else#1\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter]{statement}[1][]{
+  enhanced,
+  breakable,
+  title={Exercise \ifx\\#1\\\thetcbcounter\else#1\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{newproof}{
+  enhanced,
+  breakable,
+  frame hidden,
+  colback=white,
+  title={Proof.},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{black},
+  after upper={\hfill $\blacksquare$}
+}
+
+\begin{document}
+
+\begin{newtitle}
+  \begin{center}
+    \textbf{\Huge Alegbraic Topology Problem Bank}
+  \end{center}
+  \textbf{Dahlen Elstran} \hfill \textbf{Spring 2025}
+\end{newtitle}
+
+\begin{center} \section*{Homework 1} \end{center}
+
+\begin{hatcher}[0.2]
+    Construct an explicit deformation retraction of $\mathbb{R}^n - \{0\}$ onto $S^{n-1}$.
+\end{hatcher}
+
+\begin{hatcher}[0.3]
+    \begin{itemize}
+        \item[(a)] Show that the composition of homotopy equivalences $X \to Y$ and $Y \to Z$ is a homotopy equivalence $X \to Z$. Deduce that homotopy equivalence is an equivalence relation.
+
+        \item[(b)] Show that the relation of homotopy among maps $X \to Y$ is an equivalence relation.
+
+        \item[(c)] Show that a map homotopic to a homotopy equivalence is a homotopy equivalence.
+    \end{itemize}
+\end{hatcher}
+
+\begin{hatcher}[0.6]
+    
+\end{hatcher}
+
+\begin{hatcher}[0.10]
+    Show that a space $X$ is contractible if and only if every map $f:X \to Y$, for arbitrary $Y$, is nullhomotopic. Similarly, show $X$ is contractible if and only if every map $f: Y \to X$ is nullhomotopic.
+\end{hatcher}
+
+\begin{hatcher}[0.11]
+    Show that $f: X \to Y$ is a homotopy equivalence if there exist maps $g,h:Y \to X$ such that $fg \cong \text{id}$ and $hf \cong \text{id}$. More generally, show that $f$ is a homotopy equivalence if $fg$ and $hf$ are homotopy equivalences. 
+\end{hatcher}
+
+\begin{hatcher}[0.16]
+    
+\end{hatcher}
+
+\begin{hatcher}[0.17]
+    
+\end{hatcher}
+
+\begin{hatcher}[0.20]
+    Show that the subspace $X \subset \mathbb{R}^3$ formed by a Klein bottle intersecting itself in a circle is homotopy equivalent to $S^1 \vee S^1 \vee S^1$.
+\end{hatcher}
+
+\begin{center} \section*{Homework 2} \end{center}
+
+\begin{center} \section*{Homework 3} \end{center}
+
+\begin{center} \section*{Homework 4} \end{center}
+
+\begin{center} \section*{Homework 5} \end{center}
+
+\begin{center} \section*{Midterm} \end{center}
+
+\begin{center} \section*{Homework 6} \end{center}
+
+\begin{center} \section*{Homework 7} \end{center}
+
+\begin{center} \section*{Homework 8} \end{center}
+
+\begin{center} \section*{Homework 9} \end{center}
+
+\begin{center} \section*{Homework 10} \end{center}
+
+\begin{center} \section*{Homework 11} \end{center}
+
+\begin{center} \section*{Final} \end{center}
+
+\begin{center} \section*{Bonus Assignment} \end{center}
+
+
+\end{document}
