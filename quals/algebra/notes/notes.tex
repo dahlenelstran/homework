@@ -3,8 +3,6 @@
 \usepackage{amsmath,amsthm,amssymb,outlines}
 \usepackage{graphicx,tikzsymbols,tcolorbox}
 \newcommand{\C}{\mathbb{C}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Z}{\mathbb{Z}}
 \renewcommand\qedsymbol{$\blacksquare$}
 \tcbuselibrary{most}
 
@@ -130,63 +128,36 @@
 
 \begin{newtitle}
   \begin{center}
-    \textbf{\Huge Notes}
+    \textbf{\Huge Algebra Qualifying Exam Notes}
   \end{center}
   \textbf{Dahlen Elstran} \hfill \textbf{\today} \\
-  Professor \hfill Spring 2025
+  Dr. Dan Nakano \hfill Summer 2025
 \end{newtitle}
 
-\begin{theorem}{}
-  Something something topology
-\end{theorem}
-\begin{newproof}
-  Because I said so. \\
-  Math is cool
-\end{newproof}
+\section{Group Theory}
 
-\begin{theorem}
-  Something something topology
-\end{theorem}
-\begin{newproof}
-  Because I said so. \\
-  Math is cool
-\end{newproof}
-
-\begin{uq}
-  Unanswered question here 
-\end{uq}
-
-\begin{aq}
-  Answered question here 
-\end{aq}
-\begin{answer}
-  Here is an answer
-\end{answer}
-
-\section{The Other Section}
-
-Some other text and junk
-
-\begin{theorem}
-  Something something topology
-\end{theorem}
-\begin{newproof}
-  Because I said so. \\
-  Math is cool
-\end{newproof}
+\subsection{Subgroups and Quotient Groups}
 
 \begin{definition}
-  This is a definition.
+  Let $G$ be a group and $H$ a nonempty subset that is closed under the product in $G$. If $H$ itself is a group under 
+  the product in $G$, then $H$ is said to be a \textbf{subgroup} of $G$. This is denoted by $H \subset G$. 
 \end{definition}
 
-\begin{fact}
-  This is a fact.
-\end{fact}
+\begin{definition}
+  A subgroup other than the group itself and the trivial subgroup $\langle e \rangle$ is called a \textbf{proper subgroup}
+\end{definition}
 
-\begin{notation}
-  This is notation.
-\end{notation}
+\begin{theorem}{}
+  Let $H$ be a nonempty subset of a group $G$. Then $H$ is a subgroup of $G$ if and only if $ab^{-1} \in H$ for all $a,b \in H$. 
+\end{theorem}
 
-Changing the command for $\C$.
+\begin{newproof}
+  \par $(\implies)$ First, assume $H$ is a subgroup of $G$. Then, by the existence of inverses in subgroups, we know if $b \in H$, $b^{-1} \in H$, and by closure of 
+  subgroups, if $a \in H$ as well, then $ab^{-1} \in H$. 
+  \par $(\impliedby)$ Next, assume for all $a,b \in H$, $ab^{-1} \in H$. Then, to prove it is a subgroup, we need  to show closure, associativity, inverses, and the identity is in $H$. 
+  \begin{itemize}
+    \item 
+  \end{itemize}
+\end{newproof}
 
 \end{document}
