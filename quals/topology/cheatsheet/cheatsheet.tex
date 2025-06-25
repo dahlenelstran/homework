@@ -1,0 +1,286 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,outlines}
+\usepackage{graphicx,tikzsymbols,tcolorbox}
+\usepackage{tikz,caption,subcaption}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand\qedsymbol{$\blacksquare$}
+\tcbuselibrary{most}
+
+% Defining new environments
+
+\newtcolorbox{newtitle}{
+  enhanced,
+  colframe=black,
+  colback=white,
+  boxsep=5pt,
+  arc=8pt,
+  borderline={0.5pt}{0pt}{black},
+  borderline={1.8pt}{-5pt}{black},
+  after skip=30pt
+}
+
+\newtcolorbox[auto counter, number within=section]{theorem}[2][title]{
+  enhanced,
+  title={Theorem \thetcbcounter \if\relax\detokenize{#2}\relax\else\ (#2)\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[]{definition}{
+  enhanced,
+  title={Definition \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{fact}{
+  enhanced,
+  title={Fact \thetcbcounter},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{notation}{
+  enhanced,
+  title={Notation},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{newproof}{
+  enhanced,
+  breakable,
+  frame hidden,
+  colback=white,
+  title={Proof.},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{black},
+  after upper={\hfill $\blacksquare$}
+}
+
+\newtcolorbox[auto counter, number within=section]{uq}{
+  enhanced,
+  title=Question,
+  colframe=red,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox[auto counter, number within=section]{aq}{
+  enhanced,
+  title=Question,
+  colframe=black!50!black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
+\newtcolorbox{answer}{
+  enhanced,
+  frame hidden,
+  colback=white,
+  colframe=black!50!black,
+  title={Answer},
+  fonttitle=\bfseries,
+  coltitle=black,
+  colbacktitle=white,
+  boxed title style={boxrule=0.5mm},
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  borderline west={1.5pt}{8pt}{black!50!black}
+}
+
+% Redefine section as well
+
+% Renew commands later
+
+\begin{document}
+
+\begin{newtitle}
+  \begin{center}
+    \textbf{\Huge Algebraic Topology Qualifying Exam Cheat Sheet}
+  \end{center}
+  \textbf{Dahlen Elstran} \hfill \textbf{Spring 2025}
+\end{newtitle}
+
+\begin{center} \section*{Point Set Topology Definitions} \end{center}
+
+\begin{definition}
+  If $X$ is a topological space with topology $\mathcal{T}$, we say that a subset $U$ of $X$ 
+  is an \textbf{open set} of $X$ if $U$ belongs to the collection $\mathcal{T}$.
+\end{definition}
+
+\begin{definition}
+  A subset $A$ of a topological space $X$ is said to be \textbf{closed} if the set $x - A$ is open.
+\end{definition}
+
+\begin{definition}
+  The \textbf{closure} of $A$ is defined as the intersection of all closed sets containing $A$.
+\end{definition}
+
+Casually, I like to think about it as the outer edge of the space, unioned with the space itself. For a closed space, like $[0,1]$, 
+the closure is $\{0\} \cup \{1\}$, which is contained in the closed set. Note that all closed sets are equal to the closure of the
+closed sets; this is because the smallest closed set containing a closed set $A$ is $A$ itself. 
+
+\begin{notation}
+  The closure of a set $A$ is denoted as $\bar{A}$.
+\end{notation}
+
+So for closed sets $A$, $\bar{A} = A$. Similarly, we have:
+
+\begin{definition}
+  The \textbf{interior} of $A$ is defined as the union of all open sets contained in $A$.
+\end{definition}
+
+\begin{notation}
+  The interior of a set $A$ is denoted as $\text{Int} A$.
+\end{notation}
+
+For similar logic as before, for open sets $A$, $\text{Int} A = A$. 
+
+\begin{definition}
+  If $A$ is a subset of the topological space $X$ and if $x$ is a point of $X$. we say that $x$ is a
+  \textbf{limit point/ cluster point/ point of accumulation} of $A$ if every neighborhood of $x$ intersects $A$ in some point other than 
+  $x$ itself.
+  \par You can also say $x$ is a limit point of $A$ if $x$ is in the closure of $A - \{ x \}$.
+\end{definition}
+
+A limit point is just a point on the boundary on a subspace $A$, although it doesn't necessarily have to be in $A$ itself. The 
+limit points are kind of the boundary part of the closure. Hence the following theorem:
+
+\begin{theorem}{}
+  Let $A$ be a subset of the topological space $X$; let $A'$ be the set of all the limit points of $A$. Then 
+  $$ \bar{A} = A \cup A'. $$
+\end{theorem}
+
+One can then consider the relationship between limit points and a set being closed. If the "boundary" of a set is 
+made up of limit points, one can see that:
+
+\begin{theorem}{}
+  A subset of a topological space is closed if and only if it contains all its limit points.
+\end{theorem}
+
+\begin{definition}
+  A collection $\mathcal{A}$ of subsets of a space $X$ is said to \textbf{cover} $X$, or to be a \textbf{covering} of $X$, if the union
+  of the elements of $\mathcal{A}$ is equal to $X$. It is called an \textbf{open covering} of $X$ if its elements
+  are open subsets of $X$.
+\end{definition}
+
+\begin{definition}
+  A Space $X$ is said to be \textbf{compact} if every open covering $\mathcal{A}$ of $X$ contains a finite subcollection
+  that also covers $X$. 
+\end{definition}
+
+\begin{definition}
+  A topological space $X$ is called a \textbf{Hausdorff space} if for each pair $x_1,x_2$ of distinct points of $X$, 
+  there exist neighborhoods $U_1$ and $U_2$ of $x_1$ and $x_2$ respectively that are disjoint.
+\end{definition}
+
+\begin{definition}
+  Let $X$ be a topological space. A \textbf{separation} of $X$ is a pair $U, V$ of disjoint nonempty open subsets 
+  of $X$ whose union is $X$. A space $X$ is said to be \textbf{connected} if there does not exist a separation 
+  of $X$.
+\end{definition}
+
+This is really as simple as it sounds. Examples:
+
+INSERT IPAD DRAWING HERE
+
+\begin{definition}
+  A space is called \textbf{path connected} if every pair of points in $X$ can be joined by a path in $X$
+\end{definition}
+
+\begin{uq}
+  So how is there a difference between being path connected and connected? Shouldn't being connected, so that
+  the space has no disjoint parts, be enough to say that a path can be drawn from point to point?
+\end{uq}
+
+\begin{answer}
+  The biggest example is the \textbf{Topologists sine curve}:
+  $$ y(x) = 
+    \begin{cases}
+      \sin\left( \frac{1}{x} \right) & \text{if } 0 < x < 1, \\
+      0 & \text{if } x = 0,
+    \end{cases} $$ 
+  This is a curve that is connected, but \textbf{not} path connected.
+  Proof of connectedness:
+
+  \par I'm not exactly sure why this works, but my thoughts are just because you technically can't find any separation 
+  between the two parts, because the limit of $\sin{\frac{1}{x}}$ as $x \to 0$ from the right is 0; however, because there 
+  is not actually any connected, you cannot draw a path. At least that's what I'm getting from this right now. 
+\end{answer}
+
+\newpage
+
+\section*{Algebraic Topology Definitions}
+
+\begin{definition}
+  A map is \textbf{nullhomotopic} if it is homotopic to a constant map.
+\end{definition}
+
+\begin{definition}
+  A space is \textbf{contractible} if it is homotopically equivalent to a point. 
+\end{definition}
+
+So it's contractible if it can homotopically be squeezed into a point. 
+
+\begin{theorem}
+  A space is contractible if and only if it's identity map is nullhomotopic.
+\end{theorem}
+\begin{newproof}
+  \begin{itemize}
+    \item[($\implies$)] Assume a space $X$ is contractible, so that $X$ is homotopically equivalent to a point $x_0$. 
+      Then there exists maps $f: X \to x_0$, $g:x_0 \to X$ such that $g \circ f \cong \text{id}_X$. But $g \circ f: X 
+      \to X, x \mapsto x_0$, making it a constant map.
+    \item[($\impliedby$)] If the identity map is nullhomotopic, it is homotopic to a constant map. This is 
+      equivalent to saying there exists some $F(x,t)$ such that $F(x,0) = \text{id}_X$ and $F(x,1) = x_0 \forall x \in X$.
+      This homotopy describes the space $X$ contracting to the point $x_0$ continuously.
+  \end{itemize}
+\end{newproof}
+
+The backwards direction of this proof seems hand-wavey, so I may need to go back and look at this. 
+
+\begin{definition}
+  A space is called \textbf{simply connected} if it is path connected and has trivial fundamental group
+\end{definition}
+
+So a space is simply connected if there's nothing on the inside of it that causes loops to get "caught" on 
+things. The first example that comes to my mind is how $S^2$ is simply connected, because it is path connected clearly, 
+and any loop on $S^2$ can be contracted to a point (trivial fundamental group). On the other hand, the torus is path
+connected, but a loop could be caught around the donut hole in the middle, unable to contract, resulting in a nontrivial 
+fundamental group ($\Z \times \Z$, specifically).
+
+\end{document}
