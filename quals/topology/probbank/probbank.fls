@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 PWD /Users/dahlen/homework/quals/topology/probbank
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
+=======
+PWD /home/dahlen/homework/quals/topology/probbank
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+>>>>>>> 0a91759d74a53cd92cf26f2f93a628999ecbeef0
 INPUT probbank.tex
 OUTPUT probbank.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
