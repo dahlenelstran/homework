@@ -70,6 +70,19 @@
   boxed title style={boxrule=0.5mm}
 }
 
+\newtcolorbox[auto counter]{statement}[1][]{
+  enhanced,
+  breakable,
+  title={Problem \ifx\\#1\\\thetcbcounter\else#1\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
 \newtcolorbox{newproof}{
   enhanced,
   breakable,

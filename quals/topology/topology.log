@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  24 JUN 2025 14:40
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.5.12)  18 JUN 2025 17:26
->>>>>>> 0a91759d74a53cd92cf26f2f93a628999ecbeef0
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  26 JUN 2025 15:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**probbank.tex
-(./probbank.tex
+**topology.tex
+(./topology.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -492,12 +488,34 @@ Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box73
 \tcb@temp=\box74
 \tcb@temp=\box75
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen277
+\captionmargin=\dimen278
+\caption@leftmargin=\dimen279
+\caption@rightmargin=\dimen280
+\caption@width=\dimen281
+\caption@indent=\dimen282
+\caption@parindent=\dimen283
+\caption@hangindent=\dimen284
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count393
+\c@continuedfloat=\count394
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count395
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count396
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.4.1'
-\c@tcbrastercolumn=\count393
-\c@tcbrasterrow=\count394
-\c@tcbrasternum=\count395
-\c@tcbraster=\count396
+\c@tcbrastercolumn=\count397
+\c@tcbrasterrow=\count398
+\c@tcbrasternum=\count399
+\c@tcbraster=\count400
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
@@ -528,33 +546,33 @@ Library (tcolorbox): 'tcbhooks.code.tex' version '6.4.1'
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.4.1'
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.4.1'
-\tcbfitdim=\dimen277
-\tcb@lowerfitdim=\dimen278
-\tcb@upperfitdim=\dimen279
-\tcb@cur@hbadness=\count397
+\tcbfitdim=\dimen285
+\tcb@lowerfitdim=\dimen286
+\tcb@upperfitdim=\dimen287
+\tcb@cur@hbadness=\count401
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count398
+\lst@mode=\count402
 \lst@gtempboxa=\box80
 \lst@token=\toks44
-\lst@length=\count399
-\lst@currlwidth=\dimen280
-\lst@column=\count400
-\lst@pos=\count401
-\lst@lostspace=\dimen281
-\lst@width=\dimen282
-\lst@newlines=\count402
-\lst@lineno=\count403
-\lst@maxwidth=\dimen283
+\lst@length=\count403
+\lst@currlwidth=\dimen288
+\lst@column=\count404
+\lst@pos=\count405
+\lst@lostspace=\dimen289
+\lst@width=\dimen290
+\lst@newlines=\count406
+\lst@lineno=\count407
+\lst@maxwidth=\dimen291
  (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count404
-\lst@skipnumbers=\count405
+\c@lstnumber=\count408
+\lst@skipnumbers=\count409
 \lst@framebox=\box81
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/09/23 1.10c listings configuration
@@ -565,7 +583,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.4.1'
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.4.1'
 )
-\c@tcblisting=\count406
+\c@tcblisting=\count410
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -590,25 +608,29 @@ File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.4.1'
 )
-\c@tcb@cnt@hatcher=\count407
-\c@tcb@cnt@statement=\count408
- (./probbank.aux)
-\openout1 = `probbank.aux'.
+\c@tcb@cnt@theorem=\count411
+\c@tcb@cnt@fact=\count412
+\c@tcb@cnt@notation=\count413
+\c@tcb@cnt@statement=\count414
+\c@tcb@cnt@uq=\count415
+\c@tcb@cnt@aq=\count416
+ (./topology.aux)
+\openout1 = `topology.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
+LaTeX Font Info:    ... okay on input line 143.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -618,15 +640,15 @@ LaTeX Font Info:    ... okay on input line 64.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(36.135pt, 542.02501pt, 36.135pt)
-* v-part:(T,H,B)=(36.135pt, 722.7pt, 36.135pt)
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=542.02501pt
-* \textheight=722.7pt
-* \oddsidemargin=-36.135pt
-* \evensidemargin=-36.135pt
-* \topmargin=-73.135pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -646,16 +668,16 @@ LaTeX Font Info:    ... okay on input line 64.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count409
-\scratchdimen=\dimen284
+\scratchcounter=\count417
+\scratchdimen=\dimen292
 \scratchbox=\box82
-\nofMPsegments=\count410
-\nofMParguments=\count411
+\nofMPsegments=\count418
+\nofMParguments=\count419
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count412
-\MPscratchDim=\dimen285
-\MPnumerator=\count413
-\makeMPintoPDFobject=\count414
+\MPscratchCnt=\count420
+\MPscratchDim=\dimen293
+\MPnumerator=\count421
+\makeMPintoPDFobject=\count422
 \everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -663,69 +685,75 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count415
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count423
  (/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks47
 \inpenc@posthook=\toks48
 )
-<<<<<<< HEAD
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 155.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 155.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-=======
-LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
->>>>>>> 0a91759d74a53cd92cf26f2f93a628999ecbeef0
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 [1
 
-<<<<<<< HEAD
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./probbank.aux)
-=======
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-[2] (./probbank.aux)
->>>>>>> 0a91759d74a53cd92cf26f2f93a628999ecbeef0
+[2]
+
+[3]
+
+[4]
+<pics/liftcomposition.jpg, id=64, 1000.73875pt x 453.695pt>
+File: pics/liftcomposition.jpg Graphic file (type jpg)
+<use pics/liftcomposition.jpg>
+Package pdftex.def Info: pics/liftcomposition.jpg  used on input line 338.
+(pdftex.def)             Requested size: 200.14421pt x 90.73738pt.
+
+
+[5 <./pics/liftcomposition.jpg>]
+<pics/inducedliftcomposition.jpg, id=68, 1459.4525pt x 525.965pt>
+File: pics/inducedliftcomposition.jpg Graphic file (type jpg)
+<use pics/inducedliftcomposition.jpg>
+Package pdftex.def Info: pics/inducedliftcomposition.jpg  used on input line 342.
+(pdftex.def)             Requested size: 291.88533pt x 105.19113pt.
+
+
+[6 <./pics/inducedliftcomposition.jpg>]
+
+[7]
+
+[8]
+
+[9]
+
+[10] (./topology.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 22930 strings out of 473190
- 506230 string characters out of 5715801
- 978112 words of memory out of 5000000
- 45790 multiletter control sequences out of 15000+600000
-=======
- 22929 strings out of 475171
- 501901 string characters out of 5767095
- 968292 words of memory out of 5000000
- 45533 multiletter control sequences out of 15000+600000
->>>>>>> 0a91759d74a53cd92cf26f2f93a628999ecbeef0
- 564702 words of font info for 58 fonts, out of 8000000 for 9000
+ 24534 strings out of 473190
+ 537121 string characters out of 5715801
+ 997415 words of memory out of 5000000
+ 47386 multiletter control sequences out of 15000+600000
+ 565307 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,105p,491b,1331s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<<<<<<< HEAD
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on probbank.pdf (1 page, 83807 bytes).
-=======
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on probbank.pdf (2 pages, 88732 bytes).
->>>>>>> 0a91759d74a53cd92cf26f2f93a628999ecbeef0
+ 99i,11n,105p,488b,1331s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on topology.pdf (10 pages, 320010 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

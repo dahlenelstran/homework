@@ -70,6 +70,19 @@
   boxed title style={boxrule=0.5mm}
 }
 
+\newtcolorbox[auto counter]{statement}[1][]{
+  enhanced,
+  breakable,
+  title={Problem \ifx\\#1\\\thetcbcounter\else#1\fi},
+  colframe=black,
+  colback=white,
+  colbacktitle=white,
+  fonttitle=\bfseries,
+  coltitle=black,
+  attach boxed title to top left={yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2, xshift=2mm},
+  boxed title style={boxrule=0.5mm}
+}
+
 \newtcolorbox{newproof}{
   enhanced,
   breakable,
@@ -131,7 +144,7 @@
 
 \begin{newtitle}
   \begin{center}
-    \textbf{\Huge Algebraic Topology Qualifying Exam Cheat Sheet}
+    \textbf{\Huge Topology Qual Cheat Sheet}
   \end{center}
   \textbf{Dahlen Elstran} \hfill \textbf{Spring 2025}
 \end{newtitle}
@@ -257,7 +270,7 @@ INSERT IPAD DRAWING HERE
 
 So it's contractible if it can homotopically be squeezed into a point. 
 
-\begin{theorem}
+\begin{theorem}{}
   A space is contractible if and only if it's identity map is nullhomotopic.
 \end{theorem}
 \begin{newproof}
@@ -282,5 +295,167 @@ things. The first example that comes to my mind is how $S^2$ is simply connected
 and any loop on $S^2$ can be contracted to a point (trivial fundamental group). On the other hand, the torus is path
 connected, but a loop could be caught around the donut hole in the middle, unable to contract, resulting in a nontrivial 
 fundamental group ($\Z \times \Z$, specifically).
+
+\begin{definition}
+  For a space $X$ to be \textbf{locally path-connected}, for each point $x \in X$ and each neighborhood $U$ of $x$, there must 
+  be an open neighborhood $V \subset U$ of $x$ that is path-connected.
+\end{definition}
+
+A good example of this would be two disjoint discs. Clearly, the space itself isn't path connected, but the two components are 
+path-connected themselves, so the space is locally path-connected.
+
+\begin{aq}
+  So why is $p$ from $\tilde{X}$ to $X$? To me, it seems more natural to assign $x \in X$ to somewhere in the cover. 
+\end{aq}
+\begin{answer}
+  A cover could have more than one sheet, so that each $x \in X$ maps to multiple $\tilde{x} \in \tilde{X}$. Thus $p$ would 
+  not be a function if it went from $X$ to $\tilde{X}$ for multi-sheeted covering spaces. 
+\end{answer}
+\begin{theorem}{Homotopy Lifting Property}
+  Given a covering space $p: \tilde{Y} \to Y$, a homotopy $f_t: X \to Y$, and a map $\tilde{f_0}: X \to \tilde{Y}$ lifting $f_0$, 
+  then there exists a unique homotopy $\tilde{f}_t:X \to \tilde{Y}$ of $\tilde{f}_0$ that lifts $f_t$.
+\end{theorem}
+
+\begin{theorem}{Lifting Criterion}
+  Suppose given a covering space $p:(\tilde{Y},\tilde{y}_0) \to (Y, y_0)$ and a map $f:(X,x_0) \to (Y, y_0)$ with 
+  $X$ path-connected and locally path-connected. Then a lift $\tilde{f}: (X,x_0) \to (\tilde{Y}, \tilde{y}_0)$ 
+  of $f$ exists if and only if $f_*(\pi_1(X,x_0)) \subset p_*(\pi_1(\tilde{Y},\tilde{y}_0))$.
+\end{theorem}
+\begin{aq}
+  So what is $p_*(\pi_1(\tilde{Y},\tilde{y}_0))$?
+\end{aq}
+\begin{answer}
+  First note that $(\tilde{Y}, \tilde{y}_0)$ is the covering space of $Y$ and it's matching basepoint $y_0$ in the cover. 
+  Obviously, $\pi_1(\tilde{Y},\tilde{y}_0)$ is the fundamental group of this covering space, and $p: (\tilde{Y}, \tilde{y}_0) 
+  \to (Y,y_0)$ is the map that describes how the covering space covers $Y$, so $p_*$ is the induced homomorphism of the 
+  fundamental groups. So $p_*(\pi_1(\tilde{Y},\tilde{y}_0))$ are the values in the codomain that are actually mapped to, or 
+  $\text{img}(p_*)$. Note that $\text{img}(p_*) \subset \pi_1(Y,y_0)$, just like $f_*(\pi_1(X,x_0)) = \text{img}(f_*) \subset 
+  \pi_1(Y,y_0)$, which makes sense.
+\end{answer}
+
+Given this, we can look at this diagram to see the relationship between $X$,$Y$ and $\tilde{Y}$: 
+
+\par \begin{center} \includegraphics[scale=.2]{pics/liftcomposition} \end{center} 
+
+And there is a similar setup for their respective fundamental groups:
+
+\par \begin{center} \includegraphics[scale=.2]{pics/inducedliftcomposition} \end{center} 
+
+\begin{fact}
+  By the diagrams above, we can see $f = p \circ \tilde{f}$ and $f_* = p_* \circ \tilde{f}_*$.
+\end{fact}
+
+\begin{uq}
+  So what determines whether or not we can assume that $f$ is this composition? Is there some property to satisfy?
+\end{uq}
+
+\newpage
+
+\section*{Qualifying Exams}
+
+\subsection*{Spring 2025}
+
+\begin{statement}
+  Prove that any map $\R P^2 \to S^1 \times S^1$ is nullhomotopic. Prove that there exists a map $S^1 \times S^1 \to \R P^2$ which 
+  is not nullhomotopic.
+\end{statement}
+\begin{newproof}
+  The universal cover of $S^1 \times S^1$ is $\R \times \R$. So if $f:\R P^2 \to S^1 \times S^1$, the lifted map $\tilde{f}: \R P^2 \to \R 
+  \times \R$ is nullhomotopic, since $\R \times \R$ is contractible. If the lifted map $\tilde{f}$ is nullhomotopic,
+  then the map $f$ must be. So all that is left to show is that we can lift the map, so we must meet the lifting 
+  criterion.
+  \par The fundamental group of $S^1 \times S^1$ is $\Z \times \Z$, and the fundamental group of $\R P^2$ is $\Z / 2 \Z$, 
+  as can be seen by the following diagrams:
+  \par INSERT IPAD DRAWINGS HERE
+  \par Then $f$ induces a homomorphism $f_*: \pi_1(\R P^2) \to \pi_1(S^1 \times S^1)$, which is clearly trivial. 
+  Then we know $f_*(\pi_1(X,x_0)) \subset p_*(\pi_1(\tilde{Y},\tilde{y}_0))$, because $f_*(\pi_1(X,x_0))=f_*(\Z / 2\Z)=0$, and
+  $p_*(\pi_1(\tilde{Y},\tilde{y}_0))=p_*(\pi_1(\R \times \R))=p_*(0)=0$. We must also show that $\R P^2$ is path-connected 
+  and locally path-connected, but this is obvious as it is a quotient space of $S^2$, and $S^2$ has those properties.
+  Thus the lifting criterion is met, 
+  and $f$ must be nullhomotopic.
+\end{newproof}
+\begin{aq}
+  Why do we need the fundamental groups? Why can't we just say that the lifted map is nullhomotopic, so the 
+  normal map must be to?
+\end{aq}
+\begin{answer}
+  We have to prove the lift exists, and so we must satisfy the lifting criterion.
+\end{answer}
+\begin{aq}
+  Why does any map $f: \Z / 2\Z \to \Z \times \Z$ have to be trivial?
+\end{aq}
+\begin{answer}
+  We know that $\Z / 2 \Z$, or $\Z_2$ has two elements, $\{0,1\}$. We know because $f$ is a homomorphism,
+  $f(0)=0$. Then $f(1)$ must satisfy $f(1 + 1) = f(1) + f(1)$, but $1+1=0$ in $\Z_2$, so we have 
+  $f(1) + f(1) = 0$, and because $\Z \times \Z$ is \textbf{torsion-free} (there are no non-identity elements that have 
+  finite order (so like there are no non-identity elements that can every generate the identity by themselves)),
+  the only values $f(1)$ can take on to follow this restriction is 0. Thus every element in $\Z_2$ maps to 0, and 
+  $f$ must be trivial.
+\end{answer}
+\begin{aq}
+  So why does the lift being nullhomotopic imply the original is nullhomotopic?
+\end{aq}
+\begin{answer}
+  So we know $tilde{f} \cong c_1$, where $c_1$ is a constant map. But $f = p \circ \tilde{f} \cong p \circ c_1$, so for 
+  $f$ to be nullhomotopic, $p$ must be nullhomotopic too. But because $p:\R \times \R \to S^1 \times S^1$, and 
+  $\R \times \R$ is contractible, $p$ is nullhomotopic as well, so that $p \cong c_2$ for some constant map $c_2$. 
+  Thus $f \cong c_2 \circ c_1$, so that $f$ is nullhomotopic.
+\end{answer}
+
+\newpage
+
+\section*{Blank Problem Bank}
+
+\subsection*{Homework 1}
+
+\begin{statement}[0.2]
+    Construct an explicit deformation retraction of $\mathbb{R}^n - \{0\}$ onto $S^{n-1}$.
+\end{statement}
+
+\begin{statement}[0.3]
+    \begin{itemize}
+        \item[(a)] Show that the composition of homotopy equivalences $X \to Y$ and $Y \to Z$ is a homotopy equivalence $X \to Z$. Deduce that homotopy equivalence is an equivalence relation.
+
+        \item[(b)] Show that the relation of homotopy among maps $X \to Y$ is an equivalence relation.
+
+        \item[(c)] Show that a map homotopic to a homotopy equivalence is a homotopy equivalence.
+    \end{itemize}
+\end{statement}
+
+\begin{statement}[0.6]
+  \begin{itemize}
+    \item[(a)] Let $X$ be the subspace of $\R^2$ consisting of the horizontal segment $[0,1] \times \{0\}$ 
+      together with all the vertical segments $\{r\} \times [0,1-r]$ for $r$ a rational number in 
+      $[0,1]$. Show that $X$ deformation retracts to any point in the segment $[0,1] \times \{ 0\}$, but
+      not to any other point. [See the preceding problem]
+    \item[(b)] Let $Y$ be the subspace of $\R^2$ that is the union of an infinite number of copies of $X$ 
+      arranged as in the figure below. Show that $Y$ is contractible but does not deformation retract 
+      onto any point. 
+    \item[(c)] Let $Z$ be the zigzag subspace of $Y$ homeomorphic to $/R$ indicated by the heavier line. 
+      Show there is a deformation retraction in the weak sense (see Exercise 4) of $Y$ onto $Z$, but no true 
+      deformation retraction.
+  \end{itemize}
+\end{statement}
+
+\begin{statement}[0.10]
+    Show that a space $X$ is contractible if and only if every map $f:X \to Y$, for arbitrary $Y$, is nullhomotopic. Similarly, show $X$ is contractible if and only if every map $f: Y \to X$ is nullhomotopic.
+\end{statement}
+
+\begin{statement}[0.11]
+    Show that $f: X \to Y$ is a homotopy equivalence if there exist maps $g,h:Y \to X$ such that $fg \cong \text{id}$ and $hf \cong \text{id}$. More generally, show that $f$ is a homotopy equivalence if $fg$ and $hf$ are homotopy equivalences. 
+\end{statement}
+
+\begin{statement}[0.16]
+  Show that $S^{\infty}$ is contractible.
+\end{statement}
+
+\begin{statement}[0.17]
+    Construct a 2-dimensional cellcomplex that contains both an annulus $S^1 \times I$ and a Mobius band as 
+    deformation retractions.
+\end{statement}
+
+\begin{statement}[0.20]
+    Show that the subspace $X \subset \mathbb{R}^3$ formed by a Klein bottle intersecting itself in a circle is homotopy equivalent to $S^1 \vee S^1 \vee S^1$.
+\end{statement}
 
 \end{document}
