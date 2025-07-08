@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1750967949.82019 "topology.tex" "topology.pdf" "topology" 1750967955.73457 0
+["pdflatex"] 1751997105.63147 "topology.tex" "topology.pdf" "topology" 1751997112.35919 0
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -180,8 +180,8 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "pics/inducedliftcomposition.jpg" 1750963661.39575 114463 cf546e310b5068f1580ca0bf54c702ff ""
   "pics/liftcomposition.jpg" 1750963662.56805 59225 c598f07e99789f5b564a3019217ac393 ""
-  "topology.aux" 1750967955.39201 33 06c322e1d88c4778ac780ba5e7d05c77 "pdflatex"
-  "topology.tex" 1750967755.57285 18960 dc371c47cb33c3dd36af26198c0606cc ""
+  "topology.aux" 1751997111.95722 33 cd8a9e253be16178be412705367a589a "pdflatex"
+  "topology.tex" 1751997097.95076 18985 9a9762461fb26684c97f1c5d5660525e ""
   (generated)
   "topology.aux"
   "topology.log"
